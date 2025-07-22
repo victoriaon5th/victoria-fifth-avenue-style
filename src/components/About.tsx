@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 marble-about-bg">
+    <section id="about" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="flex justify-center">
           <Card className="max-w-4xl w-full bg-card border-border shadow-lg">
