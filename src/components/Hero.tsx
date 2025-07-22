@@ -17,7 +17,7 @@ const Hero = () => {
         </h1>
         
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto font-light">
-          Fashion Concierge
+          Your Influencer's Conceirge for Fashion, STYLING, Shopping, Sourcing & Wardrobe Making 👗
         </p>
         
         <p className="text-lg text-muted-foreground mb-12 max-w-3xl mx-auto">
