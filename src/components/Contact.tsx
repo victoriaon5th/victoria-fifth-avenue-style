@@ -1,4 +1,4 @@
-import { Mail, Phone, Instagram, Briefcase, User } from "lucide-react";
+import { Mail, Phone, Instagram, Briefcase, UserRound } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Contact = () => {
@@ -71,7 +71,7 @@ const Contact = () => {
                         className="flex items-center space-x-2 text-muted-foreground hover:text-gold transition-colors"
                       >
                         <span>@victoriarivkin</span>
-                        <User className="h-4 w-4" />
+                        <UserRound className="h-4 w-4" />
                         <span>Personal</span>
                       </a>
                     </div>
