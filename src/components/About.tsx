@@ -5,7 +5,7 @@ const About = () => {
     <section id="about" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="flex justify-center">
-          <Card className="max-w-lg w-full bg-card border-border shadow-lg">
+          <Card className="max-w-xl w-full bg-card border-border shadow-lg">
             <CardHeader className="text-center pb-4">
               <div className="mx-auto mb-4">
                 <img 
