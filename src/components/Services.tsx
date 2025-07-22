@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { Dialog, DialogContent, DialogOverlay } from "@/components/ui/dialog"
+import { Dialog, DialogContent, DialogOverlay, DialogTitle, DialogDescription } from "@/components/ui/dialog"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Shirt, ShoppingBag, Gem, Briefcase, ChevronLeft, ChevronRight } from "lucide-react"
@@ -152,6 +152,8 @@ const Services = () => {
         <Dialog open={selectedImageIndex !== null} onOpenChange={() => setSelectedImageIndex(null)}>
           <DialogOverlay className="bg-black/60" />
           <DialogContent className="max-w-4xl w-full max-h-[90vh] p-0 border-0 bg-transparent shadow-none [&>button]:hidden" autoFocus>
+            <DialogTitle className="sr-only">Client Love Gallery</DialogTitle>
+            <DialogDescription className="sr-only">View client testimonial images. Use arrow keys or navigation buttons to browse.</DialogDescription>
             <div className="relative">
               <button
                 onClick={() => setSelectedImageIndex(null)}
