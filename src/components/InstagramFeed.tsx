@@ -1,13 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Dialog, DialogContent, DialogOverlay, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { InstagramScraper } from "./InstagramScraper";
 
 const InstagramFeed = () => {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
-  const [instagramPosts, setInstagramPosts] = useState<string[]>([
-    // Fallback images if scraping fails
+
+  // Instagram posts - these would ideally come from Instagram API
+  // For now, using placeholder images that represent Instagram posts
+  const instagramPosts = [
     "/lovable-uploads/a4143735-3468-435b-ae94-2c9cbf11b9bb.png",
     "/lovable-uploads/595977d6-0461-4619-81fa-636a1415f6a4.png",
     "/lovable-uploads/298b98fc-ebe3-4f21-990f-0c0c8dc9ef1c.png",
@@ -16,13 +17,7 @@ const InstagramFeed = () => {
     "/lovable-uploads/8a12cd36-d9d4-4d84-96b9-95d9b26c60a8.png",
     "/lovable-uploads/bf44a68c-ce4e-43ca-b446-0d8f53be92b1.png",
     "/lovable-uploads/c2fcb72d-a8d2-47b4-870b-77294a2700c6.png",
-  ]);
-
-  const handleImagesScraped = (newImages: string[]) => {
-    if (newImages.length > 0) {
-      setInstagramPosts(newImages);
-    }
-  };
+  ];
 
   const nextImage = () => {
     if (selectedImageIndex !== null) {
@@ -45,8 +40,6 @@ const InstagramFeed = () => {
         <div className="w-24 h-1 bg-gold mx-auto mb-8"></div>
         <p className="text-muted-foreground mb-4">Latest from @victoriaon5th</p>
       </div>
-      
-      <InstagramScraper onImagesScraped={handleImagesScraped} />
       
       <div className="flex flex-wrap justify-center gap-4 max-w-6xl mx-auto">
         {instagramPosts.map((image, index) => (
