@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Dialog, DialogContent, DialogOverlay } from "@/components/ui/dialog"
 import { Card, CardContent } from "@/components/ui/card"
-import { Crown, ShoppingBag, Gem, Briefcase } from "lucide-react"
+import { Shirt, ShoppingBag, Gem, Briefcase } from "lucide-react"
 
 const Services = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
@@ -21,7 +21,7 @@ const Services = () => {
   const services = [
     {
       title: "PERSONAL STYLING",
-      icon: Crown,
+      icon: Shirt,
       description:
         "24/7 guidance for any desired peronsal style with curating looks for your lifestyle, body type, and personal brand\
          that fit any need, want, budget, and body-type."
