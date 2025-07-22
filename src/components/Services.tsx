@@ -7,15 +7,14 @@ const Services = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
   
   const clientLoveImages = [
-    "/lovable-uploads/e2ba59d6-29c2-4d00-87d1-ac2c3411d8af.png",
-    "/lovable-uploads/6c241000-f3d6-4d4c-8a3e-cf11c17cf1a5.png",
-    "/lovable-uploads/5f2436de-3cd1-4dc5-8e8b-9d781e37281a.png",
-    "/lovable-uploads/68c21a75-0f8d-4ea7-841b-fb1a33aa12c4.png",
-    "/lovable-uploads/298b98fc-ebe3-4f21-990f-0c0c8dc9ef1c.png",
-    "/lovable-uploads/595977d6-0461-4619-81fa-636a1415f6a4.png",
-    "/lovable-uploads/b82d59f8-8a21-4350-9caa-145165ecb778.png",
-    "/lovable-uploads/8a12cd36-d9d4-4d84-96b9-95d9b26c60a8.png"
-    // "/lovable-uploads/b066f943-8bd8-4621-8fcb-e828f5b07ff3.png"
+    "/lovable-uploads/a477d5d4-4b52-43e3-be3b-0f3c2c44da86.png",
+    "/lovable-uploads/2badeae8-75f7-4120-aa3d-a5cab29c2a77.png",
+    "/lovable-uploads/abac7632-0abe-454a-bff6-a092d3ebb85c.png",
+    "/lovable-uploads/9505aab6-1e22-4aed-aa6f-5e00c552f778.png",
+    "/lovable-uploads/126b21ec-cc0c-442f-9433-6419ed75178b.png",
+    "/lovable-uploads/718369cc-9717-4d75-b906-813b25d8fcdf.png",
+    "/lovable-uploads/a4143735-3468-435b-ae94-2c9cbf11b9bb.png",
+    "/lovable-uploads/0fb9a1fc-ec76-4e1e-b357-f729b2af3141.png"
   ]
 
   const services = [
