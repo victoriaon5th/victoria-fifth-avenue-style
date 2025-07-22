@@ -60,7 +60,7 @@ const Portfolio = () => {
               <img 
                 src={clients[currentIndex].images[0]} 
                 alt={`${clients[currentIndex].name} styled by Victoria`}
-                className="w-full object-contain rounded-lg"
+                className="w-full object-contain"
               />
               
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/40 via-black/20 to-transparent p-6">
