@@ -43,7 +43,7 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/f5ae14cb-c777-4800-a247-7d5529474c88.png" 
               alt="V5 Logo" 
-              className="h-10 w-auto"
+              className="h-8 w-auto"
             />
           </div>
 
