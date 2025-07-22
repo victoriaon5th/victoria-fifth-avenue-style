@@ -2,14 +2,15 @@ const Services = () => {
   const services = [
     {
       title: "PERSONAL STYLING",
-      description: "I provide guidance on personal style to clients by curating looks for your lifestyle, body type, and personal brand\
-        that fit any lifestyle, ocasion, budget, and body-type."
+      description:
+        "I provide guidance on personal style to clients by curating looks for your lifestyle, body type, and personal brand\
+         that fit any lifestyle, ocasion, budget, and body-type."
     },
     {
       title: "SHOPPING CONCEIRGE", 
       description:
         "Take the effort, knowledge, and time needed away by trusting me to handle all your shopping needs that'll fit the\
-        aesthitics, brands, budget, and trends for any ocasion or as long/often as you need."
+         aesthitics, brands, budget, and trends for any ocasion or as long/often as you need."
     },
     {
       title: "EXCLUSIVE SOURCING",
