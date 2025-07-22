@@ -45,11 +45,11 @@ const Services = () => {
           ))}
         </div>
         
-        <div className="text-center mt-12">
+        {/* <div className="text-center mt-12">
           <p className="text-lg text-gold font-medium">
             *THIS COVERS ALL BRANDS AND CATEGORIES*
           </p>
-        </div>
+        </div> */}
       </div>
     </section>
   );
