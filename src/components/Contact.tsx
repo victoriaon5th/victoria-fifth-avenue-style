@@ -64,8 +64,10 @@ const Contact = () => {
                             @victoriaon5th
                           </a>
                         </span>
-                        <div className="flex items-center ml-1 px-1">
-                          <Briefcase className="h-4 w-4" />
+                        <div className="flex items-center ml-1">
+                          <div className="w-4 h-4 flex items-center justify-center">
+                            <Briefcase className="h-4 w-4" />
+                          </div>
                           <span className="ml-1">Business</span>
                         </div>
                       </div>
@@ -79,8 +81,10 @@ const Contact = () => {
                             @victoriarivkin
                           </a>
                         </span>
-                        <div className="flex items-center ml-1 px-1">
-                          <UserRound className="h-4 w-4" />
+                        <div className="flex items-center ml-1">
+                          <div className="w-4 h-4 flex items-center justify-center">
+                            <UserRound className="h-4 w-4" />
+                          </div>
                           <span className="ml-1">Personal</span>
                         </div>
                       </div>
