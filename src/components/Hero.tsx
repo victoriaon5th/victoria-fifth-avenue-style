@@ -8,7 +8,7 @@ const Hero = () => {
           <img 
             src="/lovable-uploads/71d90199-4b72-4f33-afb4-8319837fb6a0.png" 
             alt="Victoria on 5th Logo" 
-            className="h-80 mx-auto" 
+            className="h-80 mx-auto"
           />
         </div>
         
