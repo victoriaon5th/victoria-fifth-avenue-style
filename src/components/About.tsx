@@ -7,7 +7,7 @@ const About = () => {
       className="py-20 relative"
       style={{
         backgroundImage: 'url(/lovable-uploads/2b81c3b2-17db-4b2e-936b-95284f84c76d.png)',
-        backgroundSize: 'cover',
+        backgroundSize: '150%',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
       }}
