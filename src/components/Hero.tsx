@@ -6,7 +6,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 text-center">
         <div className="mb-2">
           <img 
-            src="/lovable-uploads/71d90199-4b72-4f33-afb4-8319837fb6a0.png" 
+            src="/lovable-uploads/fd5d79e8-06a6-4f64-b7ca-4e8112a8fd32.png" 
             alt="Victoria on 5th Logo" 
             className="h-80 mx-auto" 
           />
