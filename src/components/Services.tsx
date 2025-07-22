@@ -153,14 +153,14 @@ const Services = () => {
           <DialogOverlay className="bg-black/60" />
           <DialogContent className="max-w-4xl w-full max-h-[90vh] p-0 border-0 bg-transparent shadow-none">
             <div className="relative">
-              <button
+              <div
                 onClick={() => setSelectedImageIndex(null)}
-                className="absolute top-4 right-4 z-10 text-white bg-black/50 rounded-full w-8 h-8 flex items-center justify-center hover:bg-black/70 transition-colors focus:outline-none focus-visible:outline-none focus:ring-0 focus-visible:ring-0 focus:border-none outline-none border-none focus:shadow-none focus-visible:shadow-none active:outline-none"
-                style={{ outline: 'none !important', border: 'none !important', boxShadow: 'none !important' }}
-                tabIndex={-1}
+                className="absolute top-4 right-4 z-10 text-white bg-black/50 rounded-full w-8 h-8 flex items-center justify-center hover:bg-black/70 transition-colors cursor-pointer select-none"
+                role="button"
+                aria-label="Close modal"
               >
                 ×
-              </button>
+              </div>
               
               {/* Navigation buttons */}
               <Button
