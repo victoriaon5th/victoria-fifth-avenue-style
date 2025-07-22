@@ -3,8 +3,8 @@ const Services = () => {
     {
       title: "PERSONAL STYLING",
       description:
-        "I provide guidance on personal style to clients by curating looks for your lifestyle, body type, and personal brand\
-         that fit any lifestyle, ocasion, budget, and body-type."
+        "24/7 guidance for any desired peronsal style with curating looks for your lifestyle, body type, and personal brand\
+         that fit any need, want, budget, and body-type."
     },
     {
       title: "SHOPPING CONCEIRGE", 
@@ -18,7 +18,7 @@ const Services = () => {
     },
     {
       title: "WARDROBE CONSULTING",
-      description: "Complete wardrobe analysis and strategic styling solutions"
+      description: "Complete wardrobe analysis and strategic styling solutions for your day-day and/or special ocasions."
     }
   ];
 
