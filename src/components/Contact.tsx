@@ -64,7 +64,7 @@ const Contact = () => {
                             @victoriaon5th
                           </a>
                         </span>
-                        <span className="ml-2">Business</span>
+                        <span className="ml-4">Business</span>
                       </div>
                       <div>
                         <span className="text-muted-foreground hover:text-gold transition-colors">
@@ -76,7 +76,7 @@ const Contact = () => {
                             @victoriarivkin
                           </a>
                         </span>
-                        <span className="ml-2">Personal</span>
+                        <span className="ml-4">Personal</span>
                       </div>
                     </div>
                   </div>
