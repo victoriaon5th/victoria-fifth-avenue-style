@@ -78,7 +78,6 @@ const Portfolio = () => {
             size="icon"
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white"
             onClick={prevSlide}
-            tabIndex={-1}
           >
             <ChevronLeft className="h-4 w-4" />
           </Button>
@@ -88,7 +87,6 @@ const Portfolio = () => {
             size="icon"
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white"
             onClick={nextSlide}
-            tabIndex={-1}
           >
             <ChevronRight className="h-4 w-4" />
           </Button>
