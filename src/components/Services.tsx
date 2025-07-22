@@ -155,8 +155,16 @@ const Services = () => {
             <div className="relative">
               <button
                 onClick={() => setSelectedImageIndex(null)}
-                className="absolute top-4 right-4 z-10 text-white bg-black/50 rounded-full w-8 h-8 flex items-center justify-center hover:bg-black/70 transition-colors appearance-none border-0 outline-0 focus:outline-0"
-                style={{ WebkitAppearance: 'none' }}
+                className="absolute top-4 right-4 z-10 text-white bg-black/50 rounded-full w-8 h-8 flex items-center justify-center hover:bg-black/70 transition-colors"
+                style={{ 
+                  WebkitAppearance: 'none',
+                  MozAppearance: 'none',
+                  appearance: 'none',
+                  border: 'none',
+                  outline: 'none',
+                  background: 'rgba(0, 0, 0, 0.5)',
+                  fontSize: '0'
+                }}
               >
                 <X className="h-4 w-4" />
               </button>
