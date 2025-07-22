@@ -54,13 +54,13 @@ const Portfolio = () => {
           </p>
         </div>
 
-        <div className="relative max-w-4xl mx-auto">
+        <div className="relative mx-auto">
           <div className="overflow-hidden rounded-lg shadow-2xl">
             <div className="relative">
               <img 
                 src={clients[currentIndex].images[0]} 
                 alt={`${clients[currentIndex].name} styled by Victoria`}
-                className="w-full h-[600px] object-cover"
+                className="w-full object-contain"
               />
               
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-8">
