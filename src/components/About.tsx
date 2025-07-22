@@ -14,13 +14,13 @@ const About = () => {
                   className="w-24 h-24 rounded-full object-cover mx-auto border-2 border-border"
                 />
               </div>
-              <CardTitle className="font-serif text-xl font-bold text-foreground">
+              <CardTitle className="font-serif text-2xl font-bold text-foreground">
                 Victoria Rivkin
               </CardTitle>
             </CardHeader>
             
             <CardContent className="text-center px-12 pb-12">
-              <div className="space-y-4 text-muted-foreground text-sm leading-relaxed">
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   NYC-based personal stylist and shopping expert with 
                   over five years of experience in the fashion industry. My career spans luxury 
