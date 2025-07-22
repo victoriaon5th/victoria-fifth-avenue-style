@@ -45,7 +45,7 @@ const Portfolio = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl md:text-6xl font-bold text-foreground mb-6">
-            CLIENT PORTFOLIO
+            PORTFOLIO
           </h2>
           <div className="w-24 h-1 bg-gold mx-auto mb-8"></div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
