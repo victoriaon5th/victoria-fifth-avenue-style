@@ -151,14 +151,8 @@ const Services = () => {
         {/* Modal for viewing images */}
         <Dialog open={selectedImageIndex !== null} onOpenChange={() => setSelectedImageIndex(null)}>
           <DialogOverlay className="bg-black/60" />
-          <DialogContent className="max-w-4xl w-full max-h-[90vh] p-0 border-0 bg-transparent shadow-none">
+          <DialogContent className="max-w-4xl w-full max-h-[90vh] p-0 border-0 bg-transparent shadow-none [&>button]:hidden">
             <div className="relative">
-              <button
-                onClick={() => setSelectedImageIndex(null)}
-                className="absolute top-4 right-4 z-10 text-white bg-black/50 rounded-full w-8 h-8 flex items-center justify-center hover:bg-black/70 transition-colors"
-              >
-                ×
-              </button>
               
               {/* Navigation buttons */}
               <Button
