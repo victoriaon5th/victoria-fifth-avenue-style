@@ -1,4 +1,4 @@
-import { Mail, Phone, Instagram, Briefcase, User } from "lucide-react";
+import { Mail, Phone, Instagram, Briefcase, UserRound } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Contact = () => {
@@ -53,25 +53,25 @@ const Contact = () => {
                 </div>
                   <div>
                     <p className="font-medium text-foreground">Instagram</p>
-                    <div className="space-y-1">
+                    <div className="space-y-2">
                       <a 
                         href="https://instagram.com/victoriaon5th" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="flex items-center space-x-2 text-muted-foreground hover:text-gold transition-colors"
+                        className="flex items-center text-muted-foreground hover:text-gold transition-colors"
                       >
-                        <span>@victoriaon5th</span>
-                        <Briefcase className="h-4 w-4" />
+                        <span className="w-20">@victoriaon5th</span>
+                        <Briefcase className="h-4 w-4 mx-2 flex-shrink-0" />
                         <span>Business</span>
                       </a>
                       <a 
                         href="https://instagram.com/victoriarivkin" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="flex items-center space-x-2 text-muted-foreground hover:text-gold transition-colors"
+                        className="flex items-center text-muted-foreground hover:text-gold transition-colors"
                       >
-                        <span>@victoriarivkin</span>
-                        <User className="h-4 w-4" />
+                        <span className="w-20">@victoriarivkin</span>
+                        <UserRound className="h-4 w-4 mx-2 flex-shrink-0" />
                         <span>Personal</span>
                       </a>
                     </div>
