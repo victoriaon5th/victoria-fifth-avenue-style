@@ -47,36 +47,31 @@ const Contact = () => {
                 </div>
               </div>
               
-              <div className="space-y-4">
-                <div className="flex items-center space-x-4">
-                  <Instagram className="h-5 w-5 text-gold" />
-                  <div>
-                    <p className="font-medium text-foreground">Business Instagram</p>
-                    <a 
-                      href="https://instagram.com/victoriaon5th" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-gold transition-colors"
-                    >
-                      @victoriaon5th
-                    </a>
-                  </div>
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center">
+                  <Instagram className="h-5 w-5 text-background" />
                 </div>
-                
-                <div className="flex items-center space-x-4">
-                  <Instagram className="h-5 w-5 text-gold" />
                   <div>
-                    <p className="font-medium text-foreground">Personal Instagram</p>
-                    <a 
-                      href="https://instagram.com/victoriarivkin" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-gold transition-colors"
-                    >
-                      @victoriarivkin
-                    </a>
+                    <p className="font-medium text-foreground">Instagram</p>
+                    <div className="space-y-1">
+                      <a 
+                        href="https://instagram.com/victoriaon5th" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="block text-muted-foreground hover:text-gold transition-colors"
+                      >
+                        @victoriaon5th (Business)
+                      </a>
+                      <a 
+                        href="https://instagram.com/victoriarivkin" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="block text-muted-foreground hover:text-gold transition-colors"
+                      >
+                        @victoriarivkin (Personal)
+                      </a>
+                    </div>
                   </div>
-                </div>
               </div>
             </div>
             
