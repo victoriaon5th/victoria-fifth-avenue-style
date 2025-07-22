@@ -64,6 +64,16 @@ const Services = () => {
     };
   }, [selectedImageIndex]);
 
+  // Focus the dialog when it opens
+  useEffect(() => {
+    if (selectedImageIndex !== null) {
+      setTimeout(() => {
+        const dialogContent = document.querySelector('[role="dialog"]') as HTMLElement;
+        dialogContent?.focus();
+      }, 100);
+    }
+  }, [selectedImageIndex]);
+
   const services = [
     {
       title: "PERSONAL STYLING",
