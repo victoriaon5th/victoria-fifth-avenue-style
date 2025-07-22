@@ -69,7 +69,7 @@ const Contact = () => {
                       className="block text-muted-foreground hover:text-gold transition-colors"
                     >
                       @victoriarivkin
-                    </a> - Personal
+                    </a>
                   </div>
                 </div>
               </div>
