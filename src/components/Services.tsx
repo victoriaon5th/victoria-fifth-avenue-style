@@ -1,7 +1,5 @@
 import { useState } from "react"
 import { Dialog, DialogContent, DialogOverlay } from "@/components/ui/dialog"
-import { Card, CardContent } from "@/components/ui/card"
-import { Shirt, ShoppingBag, Gem, Briefcase } from "lucide-react"
 
 const Services = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
@@ -21,26 +19,22 @@ const Services = () => {
   const services = [
     {
       title: "PERSONAL STYLING",
-      icon: Shirt,
       description:
         "24/7 guidance for any desired peronsal style with curating looks for your lifestyle, body type, and personal brand\
          that fit any need, want, budget, and body-type."
     },
     {
       title: "SHOPPING CONCEIRGE", 
-      icon: ShoppingBag,
       description:
         "Take the effort, knowledge, and time needed away by trusting me to handle all your shopping needs that'll fit the\
          aesthitics, brands, budget, and trends for any ocasion or as long/often as you need."
     },
     {
       title: "EXCLUSIVE SOURCING",
-      icon: Gem,
       description: "I make hard-to-find items easy to find for you to enjoy from luxury brands to rare collectables with my access/network to exclusive designers, owners, and traders."
     },
     {
       title: "WARDROBE CONSULTING",
-      icon: Briefcase,
       description: "Complete wardrobe analysis and strategic styling solutions for your day-day and/or special ocasions."
     }
   ];
@@ -56,24 +50,16 @@ const Services = () => {
         </div>
         
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {services.map((service, index) => {
-            const IconComponent = service.icon;
-            return (
-              <Card key={index} className="text-center">
-                <CardContent className="p-8">
-                  <div className="w-16 h-16 mx-auto mb-6 bg-gold/10 rounded-full flex items-center justify-center">
-                    <IconComponent className="h-8 w-8 text-gold" />
-                  </div>
-                  <h3 className="font-serif text-2xl text-gold mb-4 tracking-wide">
-                    {service.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {service.description}
-                  </p>
-                </CardContent>
-              </Card>
-            );
-          })}
+          {services.map((service, index) => (
+            <div key={index} className="text-center p-8 bg-background rounded-lg shadow-sm">
+              <h3 className="font-serif text-2xl text-gold mb-4 tracking-wide">
+                {service.title}
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                {service.description}
+              </p>
+            </div>
+          ))}
         </div>
         
         {/* Client Love Section */}
