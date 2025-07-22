@@ -97,6 +97,66 @@ All colors MUST be HSL.
   }
 }
 
+/* Marble background effect */
+.marble-bg {
+  background: linear-gradient(135deg, 
+    hsl(0 0% 98%) 0%,
+    hsl(240 5% 96%) 25%,
+    hsl(0 0% 100%) 50%,
+    hsl(240 3% 94%) 75%,
+    hsl(0 0% 98%) 100%
+  );
+  background-size: 400% 400%;
+  animation: marble-flow 20s ease-in-out infinite;
+  position: relative;
+}
+
+.marble-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 30%, hsla(45 20% 85% / 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, hsla(240 10% 90% / 0.4) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, hsla(0 0% 92% / 0.3) 0%, transparent 50%),
+    linear-gradient(45deg, transparent 30%, hsla(240 5% 88% / 0.2) 50%, transparent 70%),
+    linear-gradient(-45deg, transparent 40%, hsla(0 0% 94% / 0.3) 60%, transparent 80%);
+  background-size: 800px 800px, 600px 600px, 400px 400px, 200px 200px, 300px 300px;
+  background-position: 0% 0%, 100% 100%, 50% 50%, 0% 100%, 100% 0%;
+  animation: marble-veins 25s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes marble-flow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes marble-veins {
+  0% {
+    background-position: 0% 0%, 100% 100%, 50% 50%, 0% 100%, 100% 0%;
+  }
+  25% {
+    background-position: 20% 20%, 80% 80%, 30% 70%, 20% 80%, 80% 20%;
+  }
+  50% {
+    background-position: 40% 40%, 60% 60%, 60% 40%, 40% 60%, 60% 40%;
+  }
+  75% {
+    background-position: 60% 60%, 40% 40%, 80% 20%, 60% 40%, 40% 60%;
+  }
+  100% {
+    background-position: 0% 0%, 100% 100%, 50% 50%, 0% 100%, 100% 0%;
+  }
+}
+
 @layer base {
   * {
     @apply border-border;

@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-background">
+    <section className="min-h-screen flex items-center justify-center marble-bg">
       <div className="container mx-auto px-4 text-center">
         <div className="mb-2">
           <img 
