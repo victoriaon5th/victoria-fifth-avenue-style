@@ -63,7 +63,7 @@ const Portfolio = () => {
                 className="w-full object-contain"
               />
               
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-8">
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
                 <h3 className="font-serif text-3xl text-white mb-2">
                   {clients[currentIndex].name}
                 </h3>
