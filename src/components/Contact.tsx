@@ -17,10 +17,8 @@ const Contact = () => {
             </p>
             
             <div className="space-y-6">
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center">
-                  <Mail className="h-5 w-5 text-background" />
-                </div>
+              <div className="flex items-center space-x-3">
+                <Mail className="h-5 w-5 text-gold" />
                 <div>
                   <p className="font-medium text-foreground">Email</p>
                   <a 
@@ -32,10 +30,8 @@ const Contact = () => {
                 </div>
               </div>
               
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center">
-                  <Phone className="h-5 w-5 text-background" />
-                </div>
+              <div className="flex items-center space-x-3">
+                <Phone className="h-5 w-5 text-gold" />
                 <div>
                   <p className="font-medium text-foreground">Phone</p>
                   <a 
@@ -47,31 +43,29 @@ const Contact = () => {
                 </div>
               </div>
               
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center">
-                  <Instagram className="h-5 w-5 text-background" />
-                </div>
-                  <div>
-                    <p className="font-medium text-foreground">Instagram</p>
-                    <div className="space-y-1">
-                      <a 
-                        href="https://instagram.com/victoriaon5th" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="block text-muted-foreground hover:text-gold transition-colors"
-                      >
-                        @victoriaon5th (Business)
-                      </a>
-                      <a 
-                        href="https://instagram.com/victoriarivkin" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="block text-muted-foreground hover:text-gold transition-colors"
-                      >
-                        @victoriarivkin (Personal)
-                      </a>
-                    </div>
+              <div className="flex items-center space-x-3">
+                <Instagram className="h-5 w-5 text-gold" />
+                <div>
+                  <p className="font-medium text-foreground">Instagram</p>
+                  <div className="space-y-1">
+                    <a 
+                      href="https://instagram.com/victoriaon5th" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="block text-muted-foreground hover:text-gold transition-colors"
+                    >
+                      @victoriaon5th (Business)
+                    </a>
+                    <a 
+                      href="https://instagram.com/victoriarivkin" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="block text-muted-foreground hover:text-gold transition-colors"
+                    >
+                      @victoriarivkin (Personal)
+                    </a>
                   </div>
+                </div>
               </div>
             </div>
             
