@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center marble-hero-bg">
-      <div className="container mx-auto px-4 text-center relative z-10">
+    <section className="min-h-screen flex items-center justify-center bg-background">
+      <div className="container mx-auto px-4 text-center">
         <div className="mb-2">
           <img 
             src="/lovable-uploads/fd5d79e8-06a6-4f64-b7ca-4e8112a8fd32.png" 
