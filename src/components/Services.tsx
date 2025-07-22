@@ -5,8 +5,10 @@ const Services = () => {
       description: "Curated looks for your lifestyle, body type, and personal brand"
     },
     {
-      title: "PERSONAL SHOPPING", 
-      description: "Expert selection and sourcing of pieces that elevate your wardrobe"
+      title: "SHOPPING CONCEIRGE", 
+      description:
+        "Take the effort, knowledge, and time needed away by trusting me to handle all your shopping needs that'll fit the\
+        aesthitics, brands, budget, and trends for any ocasion or as long/often as you need."
     },
     {
       title: "EXCLUSIVE SOURCING",
