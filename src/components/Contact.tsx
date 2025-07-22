@@ -1,4 +1,4 @@
-import { Mail, Phone, Instagram, Briefcase, UserRound } from "lucide-react";
+import { Mail, Phone, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Contact = () => {
@@ -54,7 +54,7 @@ const Contact = () => {
                   <div>
                     <p className="font-medium text-foreground">Instagram</p>
                     <div className="space-y-1">
-                      <div className="flex items-center">
+                      <div>
                         <span className="text-muted-foreground hover:text-gold transition-colors">
                           <a 
                             href="https://instagram.com/victoriaon5th" 
@@ -64,12 +64,9 @@ const Contact = () => {
                             @victoriaon5th
                           </a>
                         </span>
-                        <div className="flex items-center ml-1 px-1">
-                          <Briefcase className="h-4 w-4" />
-                          <span className="ml-1">Business</span>
-                        </div>
+                        <span className="ml-2">Business</span>
                       </div>
-                      <div className="flex items-center">
+                      <div>
                         <span className="text-muted-foreground hover:text-gold transition-colors">
                           <a 
                             href="https://instagram.com/victoriarivkin" 
@@ -79,10 +76,7 @@ const Contact = () => {
                             @victoriarivkin
                           </a>
                         </span>
-                        <div className="flex items-center ml-1 px-1">
-                          <UserRound className="h-4 w-4" />
-                          <span className="ml-1">Personal</span>
-                        </div>
+                        <span className="ml-2">Personal</span>
                       </div>
                     </div>
                   </div>
