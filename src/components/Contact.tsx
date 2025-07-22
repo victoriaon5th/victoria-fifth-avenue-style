@@ -1,4 +1,4 @@
-import { Mail, Phone, Instagram } from "lucide-react";
+import { Mail, Phone, Instagram, Briefcase, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Contact = () => {
@@ -58,17 +58,21 @@ const Contact = () => {
                         href="https://instagram.com/victoriaon5th" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="block text-muted-foreground hover:text-gold transition-colors"
+                        className="flex items-center space-x-2 text-muted-foreground hover:text-gold transition-colors"
                       >
-                        @victoriaon5th (Business)
+                        <span>@victoriaon5th</span>
+                        <Briefcase className="h-4 w-4" />
+                        <span>Business</span>
                       </a>
                       <a 
                         href="https://instagram.com/victoriarivkin" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="block text-muted-foreground hover:text-gold transition-colors"
+                        className="flex items-center space-x-2 text-muted-foreground hover:text-gold transition-colors"
                       >
-                        @victoriarivkin (Personal)
+                        <span>@victoriarivkin</span>
+                        <User className="h-4 w-4" />
+                        <span>Personal</span>
                       </a>
                     </div>
                   </div>
