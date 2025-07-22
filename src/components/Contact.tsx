@@ -24,10 +24,10 @@ const Contact = () => {
                 <div>
                   <p className="font-medium text-foreground">Email</p>
                   <a 
-                    href="mailto:rivkinvictoria@gmail.com" 
+                    href="mailto:victoria@victoriaon5th.com" 
                     className="text-muted-foreground hover:text-gold transition-colors"
                   >
-                    rivkinvictoria@gmail.com
+                    victoria@victoriaon5th.com
                   </a>
                 </div>
               </div>
@@ -85,7 +85,7 @@ const Contact = () => {
             
             <div className="mt-8">
               <Button size="lg" className="px-8 py-3">
-                <a href="mailto:rivkinvictoria@gmail.com">Start Your Style Journey</a>
+                <a href="mailto:victoria@victoriaon5th.com">Start Your Style Journey</a>
               </Button>
             </div>
           </div>
