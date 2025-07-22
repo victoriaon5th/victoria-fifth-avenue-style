@@ -56,7 +56,7 @@ const Portfolio = () => {
 
         <div className="relative mx-auto w-4/5">
           <div className="overflow-hidden rounded-lg shadow-2xl bg-white p-[15px]">
-            <div className="relative">
+            <div className="relative rounded-lg overflow-hidden">
               <img 
                 src={clients[currentIndex].images[0]} 
                 alt={`${clients[currentIndex].name} styled by Victoria`}
