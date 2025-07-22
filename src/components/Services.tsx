@@ -1,10 +1,11 @@
 import { useState } from "react"
 import { Dialog, DialogContent, DialogOverlay } from "@/components/ui/dialog"
 import { Card, CardContent } from "@/components/ui/card"
-import { Shirt, ShoppingBag, Gem, Briefcase } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Shirt, ShoppingBag, Gem, Briefcase, ChevronLeft, ChevronRight } from "lucide-react"
 
 const Services = () => {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null)
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null)
   
   const clientLoveImages = [
     "/lovable-uploads/a477d5d4-4b52-43e3-be3b-0f3c2c44da86.png",
@@ -16,6 +17,22 @@ const Services = () => {
     "/lovable-uploads/a4143735-3468-435b-ae94-2c9cbf11b9bb.png",
     "/lovable-uploads/0fb9a1fc-ec76-4e1e-b357-f729b2af3141.png"
   ]
+
+  const nextImage = () => {
+    if (selectedImageIndex !== null) {
+      setSelectedImageIndex((prevIndex) => 
+        prevIndex === clientLoveImages.length - 1 ? 0 : prevIndex! + 1
+      );
+    }
+  };
+
+  const prevImage = () => {
+    if (selectedImageIndex !== null) {
+      setSelectedImageIndex((prevIndex) => 
+        prevIndex === 0 ? clientLoveImages.length - 1 : prevIndex! - 1
+      );
+    }
+  };
 
   const services = [
     {
@@ -89,7 +106,7 @@ const Services = () => {
               <div 
                 key={index}
                 className="cursor-pointer transition-all duration-300 hover:opacity-80 hover:scale-105"
-                onClick={() => setSelectedImage(image)}
+                onClick={() => setSelectedImageIndex(index)}
               >
                 <img 
                   src={image} 
@@ -102,19 +119,39 @@ const Services = () => {
         </div>
 
         {/* Modal for viewing images */}
-        <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+        <Dialog open={selectedImageIndex !== null} onOpenChange={() => setSelectedImageIndex(null)}>
           <DialogOverlay className="bg-black/60" />
           <DialogContent className="max-w-4xl w-full max-h-[90vh] p-0 border-0 bg-transparent shadow-none">
             <div className="relative">
               <button
-                onClick={() => setSelectedImage(null)}
+                onClick={() => setSelectedImageIndex(null)}
                 className="absolute top-4 right-4 z-10 text-white bg-black/50 rounded-full w-8 h-8 flex items-center justify-center hover:bg-black/70 transition-colors"
               >
                 ×
               </button>
-              {selectedImage && (
+              
+              {/* Navigation buttons */}
+              <Button
+                variant="outline"
+                size="icon"
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white z-10"
+                onClick={prevImage}
+              >
+                <ChevronLeft className="h-4 w-4" />
+              </Button>
+              
+              <Button
+                variant="outline"
+                size="icon"
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white z-10"
+                onClick={nextImage}
+              >
+                <ChevronRight className="h-4 w-4" />
+              </Button>
+
+              {selectedImageIndex !== null && (
                 <img 
-                  src={selectedImage} 
+                  src={clientLoveImages[selectedImageIndex]} 
                   alt="Client testimonial"
                   className="w-full h-auto max-h-[85vh] object-contain rounded-lg"
                 />
