@@ -5,7 +5,7 @@ const About = () => {
     <section id="about" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="flex justify-center">
-          <Card className="w-32 bg-card border-border shadow-lg">
+          <Card className="max-w-md w-full bg-card border-border shadow-lg">
             <CardHeader className="text-center pb-4">
               <div className="mx-auto mb-4">
                 <img 
@@ -15,14 +15,14 @@ const About = () => {
                 />
               </div>
               <CardTitle className="font-serif text-xl font-bold text-foreground">
-                Victoria Rivkin
+                About Victoria Rivkin
               </CardTitle>
             </CardHeader>
             
             <CardContent className="text-center px-6 pb-6">
               <div className="space-y-4 text-muted-foreground text-sm leading-relaxed">
                 <p>
-                  NYC-based personal stylist and shopping expert with 
+                  I'm Victoria Rivkin—a NYC-based personal stylist and shopping expert with 
                   over five years of experience in the fashion industry. My career spans luxury 
                   retail roles at Neiman Marcus and Saks Fifth Avenue to building a thriving 
                   personal styling business, where I provide curated wardrobe solutions for 
