@@ -4,11 +4,11 @@ const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center bg-background">
       <div className="container mx-auto px-4 text-center">
-        <div className="mb-8">
+        <div className="mb-2">
           <img 
             src="/lovable-uploads/71d90199-4b72-4f33-afb4-8319837fb6a0.png" 
             alt="Victoria on 5th Logo" 
-            className="h-80 mx-auto"
+            className="h-80 mx-auto" 
           />
         </div>
         
