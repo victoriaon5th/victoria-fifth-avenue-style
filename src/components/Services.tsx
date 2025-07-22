@@ -12,8 +12,8 @@ const Services = () => {
     "/lovable-uploads/298b98fc-ebe3-4f21-990f-0c0c8dc9ef1c.png",
     "/lovable-uploads/595977d6-0461-4619-81fa-636a1415f6a4.png",
     "/lovable-uploads/b82d59f8-8a21-4350-9caa-145165ecb778.png",
-    "/lovable-uploads/8a12cd36-d9d4-4d84-96b9-95d9b26c60a8.png",
-    "/lovable-uploads/b066f943-8bd8-4621-8fcb-e828f5b07ff3.png"
+    "/lovable-uploads/8a12cd36-d9d4-4d84-96b9-95d9b26c60a8.png"
+    // "/lovable-uploads/b066f943-8bd8-4621-8fcb-e828f5b07ff3.png"
   ]
 
   const services = [
