@@ -106,7 +106,7 @@ const Services = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl md:text-6xl font-bold text-foreground mb-6">
-            SERVICES OFFERED
+            SERVICES
           </h2>
           <div className="w-24 h-1 bg-gold mx-auto mb-8"></div>
         </div>
@@ -136,7 +136,7 @@ const Services = () => {
         <div className="mt-20">
           <div className="text-center mb-12">
             <h2 className="font-serif text-4xl md:text-6xl font-bold text-foreground mb-6">
-              CLIENT LOVE
+              TESTIMONIALS
             </h2>
             <div className="w-24 h-1 bg-gold mx-auto mb-8"></div>
           </div>
