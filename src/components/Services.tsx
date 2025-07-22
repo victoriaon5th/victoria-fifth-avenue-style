@@ -155,7 +155,7 @@ const Services = () => {
             <div className="relative">
               <button
                 onClick={() => setSelectedImageIndex(null)}
-                className="absolute top-4 right-4 z-10 text-white bg-black/50 rounded-full w-8 h-8 flex items-center justify-center hover:bg-black/70 transition-colors focus:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 focus:ring-0 focus:border-transparent outline-0 border-0"
+                className="absolute top-4 right-4 z-10 text-white bg-black/50 rounded-full w-8 h-8 flex items-center justify-center hover:bg-black/70 transition-colors"
               >
                 ×
               </button>
@@ -164,7 +164,7 @@ const Services = () => {
               <Button
                 variant="outline"
                 size="icon"
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white z-10 focus:outline-none focus-visible:ring-0 focus-visible:ring-offset-0"
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white z-10"
                 onClick={prevImage}
               >
                 <ChevronLeft className="h-4 w-4" />
@@ -173,7 +173,7 @@ const Services = () => {
               <Button
                 variant="outline"
                 size="icon"
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white z-10 focus:outline-none focus-visible:ring-0 focus-visible:ring-offset-0"
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white z-10"
                 onClick={nextImage}
               >
                 <ChevronRight className="h-4 w-4" />
