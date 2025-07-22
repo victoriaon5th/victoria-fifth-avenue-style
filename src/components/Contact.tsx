@@ -47,27 +47,31 @@ const Contact = () => {
                 </div>
               </div>
               
-              <div className="space-y-3">
-                <a 
-                  href="https://instagram.com/victoriaon5th" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center space-x-3 text-muted-foreground hover:text-gold transition-colors"
-                >
-                  <span>@victoriaon5th</span>
-                  <Instagram className="h-4 w-4" />
-                  <span>Business</span>
-                </a>
-                <a 
-                  href="https://instagram.com/victoriarivkin" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center space-x-3 text-muted-foreground hover:text-gold transition-colors"
-                >
-                  <span>@victoriarivkin</span>
-                  <Instagram className="h-4 w-4" />
-                  <span>Personal</span>
-                </a>
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center">
+                  <Instagram className="h-5 w-5 text-background" />
+                </div>
+                  <div>
+                    <p className="font-medium text-foreground">Instagram</p>
+                    <div className="space-y-1">
+                      <a 
+                        href="https://instagram.com/victoriaon5th" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="block text-muted-foreground hover:text-gold transition-colors"
+                      >
+                        @victoriaon5th (Business)
+                      </a>
+                      <a 
+                        href="https://instagram.com/victoriarivkin" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="block text-muted-foreground hover:text-gold transition-colors"
+                      >
+                        @victoriarivkin (Personal)
+                      </a>
+                    </div>
+                  </div>
               </div>
             </div>
             
