@@ -54,26 +54,36 @@ const Contact = () => {
                   <div>
                     <p className="font-medium text-foreground">Instagram</p>
                     <div className="space-y-1">
-                      <a 
-                        href="https://instagram.com/victoriaon5th" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="flex items-center space-x-2 text-muted-foreground hover:text-gold transition-colors"
-                      >
-                        <span>@victoriaon5th</span>
-                        <Briefcase className="h-4 w-4" />
-                        <span>Business</span>
-                      </a>
-                      <a 
-                        href="https://instagram.com/victoriarivkin" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="flex items-center space-x-2 text-muted-foreground hover:text-gold transition-colors"
-                      >
-                        <span>@victoriarivkin</span>
-                        <UserRound className="h-4 w-4" />
-                        <span>Personal</span>
-                      </a>
+                      <div className="flex items-center">
+                        <span className="text-muted-foreground hover:text-gold transition-colors">
+                          <a 
+                            href="https://instagram.com/victoriaon5th" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                          >
+                            @victoriaon5th
+                          </a>
+                        </span>
+                        <div className="flex items-center ml-1 px-1">
+                          <Briefcase className="h-4 w-4" />
+                          <span className="ml-1">Business</span>
+                        </div>
+                      </div>
+                      <div className="flex items-center">
+                        <span className="text-muted-foreground hover:text-gold transition-colors">
+                          <a 
+                            href="https://instagram.com/victoriarivkin" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                          >
+                            @victoriarivkin
+                          </a>
+                        </span>
+                        <div className="flex items-center ml-1 px-1">
+                          <UserRound className="h-4 w-4" />
+                          <span className="ml-1">Personal</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
               </div>
