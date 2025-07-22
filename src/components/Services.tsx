@@ -170,9 +170,9 @@ const Services = () => {
                 tabIndex={-1}
                 className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white z-10 focus-visible:ring-0 focus-visible:ring-offset-0 outline-none focus:outline-none"
                 onClick={(e) => {
+                  const dialogContent = e.currentTarget.closest('[role="dialog"]') as HTMLElement;
                   prevImage();
                   setTimeout(() => {
-                    const dialogContent = e.currentTarget.closest('[role="dialog"]') as HTMLElement;
                     dialogContent?.focus();
                   }, 0);
                 }}
@@ -186,9 +186,9 @@ const Services = () => {
                 tabIndex={-1}
                 className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white z-10 focus-visible:ring-0 focus-visible:ring-offset-0 outline-none focus:outline-none"
                 onClick={(e) => {
+                  const dialogContent = e.currentTarget.closest('[role="dialog"]') as HTMLElement;
                   nextImage();
                   setTimeout(() => {
-                    const dialogContent = e.currentTarget.closest('[role="dialog"]') as HTMLElement;
                     dialogContent?.focus();
                   }, 0);
                 }}
