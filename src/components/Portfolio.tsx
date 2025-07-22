@@ -54,7 +54,7 @@ const Portfolio = () => {
           </p>
         </div>
 
-        <div className="relative mx-auto">
+        <div className="relative mx-auto w-4/5">
           <div className="overflow-hidden rounded-lg shadow-2xl">
             <div className="relative">
               <img 
