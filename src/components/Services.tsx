@@ -155,7 +155,8 @@ const Services = () => {
             <div className="relative">
               <button
                 onClick={() => setSelectedImageIndex(null)}
-                className="absolute top-4 right-4 z-10 text-white bg-black/50 rounded-full w-8 h-8 flex items-center justify-center hover:bg-black/70 transition-colors"
+                className="absolute top-4 right-4 z-10 text-white bg-black/50 rounded-full w-8 h-8 flex items-center justify-center hover:bg-black/70 transition-colors focus:outline-none focus-visible:outline-none focus:ring-0 focus-visible:ring-0 focus:border-none outline-none border-none"
+                style={{ outline: 'none', border: 'none' }}
               >
                 ×
               </button>
