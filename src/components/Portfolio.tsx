@@ -6,18 +6,22 @@ const Portfolio = () => {
   const clients = [
     {
       name: "Rania Benchegra",
+      photographer: "📸 Photographer: Iska",
       images: ["/lovable-uploads/cd5c6dc7-c514-41b3-b978-c635ba2114a3.png"]
     },
     {
       name: "Rebecca Sorkin", 
+      photographer: "📸 Photographer: Iska",
       images: ["/lovable-uploads/71679c48-5dfc-423e-a1b3-37b6fa272600.png"]
     },
     {
       name: "Micah Parrish",
+      photographer: "📸 Photographer: Jake Sundean",
       images: ["/lovable-uploads/bf44a68c-ce4e-43ca-b446-0d8f53be92b1.png"]
     },
     {
       name: "Feturi Talaga",
+      photographer: "📸 Photographer: Victoria Rivkin",
       images: ["/lovable-uploads/25f32c3c-0796-40d3-b97b-bfb323cb302f.png"]
     }
   ];
@@ -63,7 +67,7 @@ const Portfolio = () => {
                 <h3 className="font-serif text-3xl text-white mb-2">
                   {clients[currentIndex].name}
                 </h3>
-                <p className="text-white/90">Styled by Victoria on 5th</p>
+                <p className="text-white/90">{clients[currentIndex].photographer}</p>
               </div>
             </div>
           </div>
