@@ -167,7 +167,10 @@ const Services = () => {
                 size="icon"
                 tabIndex={-1}
                 className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white z-10 focus-visible:ring-0 focus-visible:ring-offset-0 outline-none focus:outline-none"
-                onClick={prevImage}
+                onClick={(e) => {
+                  prevImage();
+                  (e.currentTarget.closest('[role="dialog"]') as HTMLElement)?.focus();
+                }}
               >
                 <ChevronLeft className="h-4 w-4" />
               </Button>
@@ -177,7 +180,10 @@ const Services = () => {
                 size="icon"
                 tabIndex={-1}
                 className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white z-10 focus-visible:ring-0 focus-visible:ring-offset-0 outline-none focus:outline-none"
-                onClick={nextImage}
+                onClick={(e) => {
+                  nextImage();
+                  (e.currentTarget.closest('[role="dialog"]') as HTMLElement)?.focus();
+                }}
               >
                 <ChevronRight className="h-4 w-4" />
               </Button>
