@@ -84,8 +84,8 @@ const Contact = () => {
           
           <div>
             <img 
-              src="/lovable-uploads/02a8afff-d556-40aa-947a-19d0ed9bcb2b.png" 
-              alt="Victoria Rivkin Contact" 
+              src="/lovable-uploads/92bfb58b-5983-4268-b446-4f2b179cfe57.png" 
+              alt="Victoria Rivkin Fashion Stylist Logo" 
               className="w-full rounded-lg shadow-lg"
             />
           </div>
