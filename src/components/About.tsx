@@ -19,7 +19,7 @@ const About = () => {
               </CardTitle>
             </CardHeader>
             
-            <CardContent className="text-center px-6 pb-6">
+            <CardContent className="text-center px-12 pb-12">
               <div className="space-y-4 text-muted-foreground text-sm leading-relaxed">
                 <p>
                   I'm Victoria Rivkin—a NYC-based personal stylist and shopping expert with 
