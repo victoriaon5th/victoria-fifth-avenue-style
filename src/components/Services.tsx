@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import { Dialog, DialogContent, DialogOverlay } from "@/components/ui/dialog"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Shirt, ShoppingBag, Gem, Briefcase, ChevronLeft, ChevronRight, X } from "lucide-react"
+import { Shirt, ShoppingBag, Gem, Briefcase, ChevronLeft, ChevronRight } from "lucide-react"
 
 const Services = () => {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null)
@@ -156,17 +156,8 @@ const Services = () => {
               <button
                 onClick={() => setSelectedImageIndex(null)}
                 className="absolute top-4 right-4 z-10 text-white bg-black/50 rounded-full w-8 h-8 flex items-center justify-center hover:bg-black/70 transition-colors"
-                style={{ 
-                  WebkitAppearance: 'none',
-                  MozAppearance: 'none',
-                  appearance: 'none',
-                  border: 'none',
-                  outline: 'none',
-                  background: 'rgba(0, 0, 0, 0.5)',
-                  fontSize: '0'
-                }}
               >
-                <X className="h-4 w-4" />
+                ×
               </button>
               
               {/* Navigation buttons */}
