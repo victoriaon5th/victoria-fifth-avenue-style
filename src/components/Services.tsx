@@ -9,8 +9,8 @@ const Services = () => {
       description: "Expert selection and sourcing of pieces that elevate your wardrobe"
     },
     {
-      title: "SOURCING",
-      description: "Access to exclusive pieces and hard-to-find items from luxury brands"
+      title: "EXCLUSIVE SOURCING",
+      description: "I make hard-to-find items easy to find for you to enjoy from luxury brands to rare collectables with my access/network to exclusive designers, owners, and traders."
     },
     {
       title: "WARDROBE CONSULTING",
