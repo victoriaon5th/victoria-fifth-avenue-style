@@ -55,7 +55,7 @@ const Contact = () => {
                     <p className="font-medium text-foreground">Instagram</p>
                     <div className="space-y-1">
                       <div className="flex">
-                        <span className="text-muted-foreground hover:text-gold transition-colors w-32">
+                        <span className="text-muted-foreground hover:text-gold transition-colors w-28">
                           <a 
                             href="https://instagram.com/victoriaon5th" 
                             target="_blank" 
@@ -67,7 +67,7 @@ const Contact = () => {
                         <span>Business</span>
                       </div>
                       <div className="flex">
-                        <span className="text-muted-foreground hover:text-gold transition-colors w-32">
+                        <span className="text-muted-foreground hover:text-gold transition-colors w-28">
                           <a 
                             href="https://instagram.com/victoriarivkin" 
                             target="_blank" 
