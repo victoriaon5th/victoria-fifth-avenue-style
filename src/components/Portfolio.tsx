@@ -6,19 +6,19 @@ const Portfolio = () => {
   const clients = [
     {
       name: "Rania Benchegra",
-      images: ["/lovable-uploads/c1809834-9946-4ddc-9400-05d73424a89b.png"]
+      images: ["/lovable-uploads/cd5c6dc7-c514-41b3-b978-c635ba2114a3.png"]
     },
     {
       name: "Rebecca Sorkin", 
-      images: ["/lovable-uploads/fb556b0d-3b61-40d0-8b65-8d28773b2497.png"]
+      images: ["/lovable-uploads/71679c48-5dfc-423e-a1b3-37b6fa272600.png"]
     },
     {
       name: "Micah Parrish",
-      images: ["/lovable-uploads/a7c28d40-7da0-4a7e-84a3-3f51e389d7c7.png"]
+      images: ["/lovable-uploads/bf44a68c-ce4e-43ca-b446-0d8f53be92b1.png"]
     },
     {
       name: "Feturi Talaga",
-      images: ["/lovable-uploads/a8b5bbaa-2e93-44f8-a429-0dc725739214.png"]
+      images: ["/lovable-uploads/25f32c3c-0796-40d3-b97b-bfb323cb302f.png"]
     }
   ];
 
