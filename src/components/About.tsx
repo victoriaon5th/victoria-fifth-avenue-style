@@ -11,7 +11,7 @@ const About = () => {
                 <img 
                   src="/lovable-uploads/c2fcb72d-a8d2-47b4-870b-77294a2700c6.png" 
                   alt="Victoria Rivkin" 
-                  className="w-24 h-24 rounded-full object-cover mx-auto border-2 border-border"
+                  className="w-32 h-32 rounded-full object-cover mx-auto border-2 border-border"
                 />
               </div>
               <CardTitle className="font-serif text-2xl font-bold text-foreground">
