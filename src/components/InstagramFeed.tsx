@@ -76,14 +76,6 @@ const InstagramFeed = () => {
           <DialogTitle className="sr-only">Instagram Feed Gallery</DialogTitle>
           <DialogDescription className="sr-only">View Instagram posts. Use arrow keys or navigation buttons to browse.</DialogDescription>
           <div className="relative">
-            <button
-              onClick={() => setSelectedImageIndex(null)}
-              tabIndex={-1}
-              className="absolute top-4 right-4 z-10 text-white bg-black/50 rounded-full w-8 h-8 flex items-center justify-center hover:bg-black/70 transition-colors text-lg leading-none focus-visible:ring-0 focus-visible:ring-offset-0 outline-none focus:outline-none"
-            >
-              ×
-            </button>
-            
             <Button
               variant="ghost"
               size="icon"
