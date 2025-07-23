@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogOverlay, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 
 const Portfolio = () => {
   const clients = [
@@ -39,6 +40,7 @@ const Portfolio = () => {
   ];
 
   const [currentIndices, setCurrentIndices] = useState([0, 0, 0, 0]);
+  const [selectedImage, setSelectedImage] = useState<{clientIndex: number, imageIndex: number} | null>(null);
 
   const nextSlide = (clientIndex: number) => {
     setCurrentIndices(prev => {
@@ -55,6 +57,68 @@ const Portfolio = () => {
       return newIndices;
     });
   };
+
+  const nextModalImage = () => {
+    if (selectedImage) {
+      const currentClient = clients[selectedImage.clientIndex];
+      const nextImageIndex = selectedImage.imageIndex === currentClient.images.length - 1 ? 0 : selectedImage.imageIndex + 1;
+      setSelectedImage({
+        clientIndex: selectedImage.clientIndex,
+        imageIndex: nextImageIndex
+      });
+    }
+  };
+
+  const prevModalImage = () => {
+    if (selectedImage) {
+      const currentClient = clients[selectedImage.clientIndex];
+      const prevImageIndex = selectedImage.imageIndex === 0 ? currentClient.images.length - 1 : selectedImage.imageIndex - 1;
+      setSelectedImage({
+        clientIndex: selectedImage.clientIndex,
+        imageIndex: prevImageIndex
+      });
+    }
+  };
+
+  // Keyboard navigation for modal
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (selectedImage === null) return;
+      
+      switch (event.key) {
+        case 'ArrowLeft':
+          event.preventDefault();
+          prevModalImage();
+          break;
+        case 'ArrowRight':
+          event.preventDefault();
+          nextModalImage();
+          break;
+        case 'Escape':
+          event.preventDefault();
+          setSelectedImage(null);
+          break;
+      }
+    };
+
+    if (selectedImage !== null) {
+      document.addEventListener('keydown', handleKeyDown);
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [selectedImage]);
+
+  // Focus the dialog when it opens
+  useEffect(() => {
+    if (selectedImage !== null) {
+      setTimeout(() => {
+        const dialogContent = document.querySelector('[role="dialog"]') as HTMLElement;
+        dialogContent?.focus();
+      }, 100);
+    }
+  }, [selectedImage]);
 
   return (
     <section id="portfolio" className="py-20 bg-marble">
@@ -78,7 +142,8 @@ const Portfolio = () => {
                   <img 
                     src={client.images[currentIndices[clientIndex]]} 
                     alt={`${client.name} styled by Victoria`}
-                    className="w-full h-[400px] object-cover"
+                    className="w-full h-[400px] object-cover cursor-pointer transition-all duration-300 hover:opacity-90"
+                    onClick={() => setSelectedImage({clientIndex, imageIndex: currentIndices[clientIndex]})}
                   />
                   
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/40 via-black/20 to-transparent p-4">
@@ -130,6 +195,67 @@ const Portfolio = () => {
             </div>
           ))}
         </div>
+
+        {/* Modal for viewing images */}
+        <Dialog open={selectedImage !== null} onOpenChange={() => setSelectedImage(null)}>
+          <DialogOverlay className="bg-black/60" />
+          <DialogContent className="max-w-4xl w-full max-h-[90vh] p-0 border-0 bg-transparent shadow-none [&>button]:hidden" autoFocus>
+            <DialogTitle className="sr-only">Portfolio Gallery</DialogTitle>
+            <DialogDescription className="sr-only">View portfolio images. Use arrow keys or navigation buttons to browse.</DialogDescription>
+            <div className="relative">
+              <button
+                onClick={() => setSelectedImage(null)}
+                tabIndex={-1}
+                className="absolute top-4 right-4 z-10 text-white bg-black/50 rounded-full w-8 h-8 flex items-center justify-center hover:bg-black/70 transition-colors text-lg leading-none focus-visible:ring-0 focus-visible:ring-offset-0 outline-none focus:outline-none"
+              >
+                ×
+              </button>
+              
+              {/* Navigation buttons */}
+              <Button
+                variant="outline"
+                size="icon"
+                tabIndex={-1}
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white z-10 focus-visible:ring-0 focus-visible:ring-offset-0 outline-none focus:outline-none"
+                onMouseDown={(e) => e.preventDefault()}
+                onClick={() => {
+                  prevModalImage();
+                }}
+              >
+                <ChevronLeft className="h-4 w-4" />
+              </Button>
+              
+              <Button
+                variant="outline"
+                size="icon"
+                tabIndex={-1}
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white z-10 focus-visible:ring-0 focus-visible:ring-offset-0 outline-none focus:outline-none"
+                onMouseDown={(e) => e.preventDefault()}
+                onClick={() => {
+                  nextModalImage();
+                }}
+              >
+                <ChevronRight className="h-4 w-4" />
+              </Button>
+
+              {selectedImage !== null && (
+                <div className="text-center">
+                  <img 
+                    src={clients[selectedImage.clientIndex].images[selectedImage.imageIndex]} 
+                    alt={`${clients[selectedImage.clientIndex].name} styled by Victoria`}
+                    className="w-full h-auto max-h-[85vh] object-contain rounded-lg"
+                  />
+                  <div className="mt-4 text-white">
+                    <h3 className="font-serif text-2xl mb-2">
+                      {clients[selectedImage.clientIndex].name}
+                    </h3>
+                    <p className="text-white/90">{clients[selectedImage.clientIndex].photographer}</p>
+                  </div>
+                </div>
+              )}
+            </div>
+          </DialogContent>
+        </Dialog>
       </div>
     </section>
   );
