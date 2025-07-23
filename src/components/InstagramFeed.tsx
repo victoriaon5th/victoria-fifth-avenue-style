@@ -40,7 +40,7 @@ const InstagramFeed = () => {
         {/* <p className="text-muted-foreground mb-4">Latest from @victoriaon5th</p> */}
       </div>
       
-      <div className="flex flex-wrap justify-center items-center gap-4 max-w-6xl mx-auto px-4">
+      <div className="flex flex-wrap justify-center gap-4 max-w-6xl mx-auto">
         {instagramUrls.map((url, index) => (
           <div 
             key={index}
