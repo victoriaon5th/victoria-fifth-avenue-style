@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Dialog, DialogContent, DialogOverlay, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { InstagramEmbed } from 'react-social-media-embed';
 
 const InstagramFeed = () => {
@@ -17,6 +19,17 @@ const InstagramFeed = () => {
     "https://www.instagram.com/victoriaon5th/p/DLyIfnlSHtr/"
   ];
 
+  const nextImage = () => {
+    if (selectedImageIndex !== null) {
+      setSelectedImageIndex((selectedImageIndex + 1) % instagramUrls.length);
+    }
+  };
+
+  const previousImage = () => {
+    if (selectedImageIndex !== null) {
+      setSelectedImageIndex((selectedImageIndex - 1 + instagramUrls.length) % instagramUrls.length);
+    }
+  };
 
   // Fallback images for thumbnails
   const fallbackImages = [
@@ -66,11 +79,36 @@ const InstagramFeed = () => {
             <button
               onClick={() => setSelectedImageIndex(null)}
               tabIndex={-1}
-              className="absolute -top-4 -right-4 z-10 text-white bg-black/50 rounded-full w-8 h-8 flex items-center justify-center hover:bg-black/70 transition-colors text-lg leading-none focus-visible:ring-0 focus-visible:ring-offset-0 outline-none focus:outline-none"
+              className="absolute top-4 right-4 z-10 text-white bg-black/50 rounded-full w-8 h-8 flex items-center justify-center hover:bg-black/70 transition-colors text-lg leading-none focus-visible:ring-0 focus-visible:ring-offset-0 outline-none focus:outline-none"
             >
               ×
             </button>
             
+            <Button
+              variant="ghost"
+              size="icon"
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 text-white bg-black/50 hover:bg-black/70 rounded-full w-10 h-10 focus-visible:ring-0 focus-visible:ring-offset-0"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                previousImage();
+              }}
+            >
+              <ChevronLeft className="h-4 w-4" />
+            </Button>
+            
+            <Button
+              variant="ghost"
+              size="icon"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 text-white bg-black/50 hover:bg-black/70 rounded-full w-10 h-10 focus-visible:ring-0 focus-visible:ring-offset-0"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                nextImage();
+              }}
+            >
+              <ChevronRight className="h-4 w-4" />
+            </Button>
 
             {selectedImageIndex !== null && (
               <div className="flex justify-center">
