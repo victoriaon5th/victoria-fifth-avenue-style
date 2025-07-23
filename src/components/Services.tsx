@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import { Dialog, DialogContent, DialogOverlay, DialogTitle, DialogDescription } from "@/components/ui/dialog"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Shirt, Diamond, Sparkles, ShoppingBag, ChevronLeft, ChevronRight } from "lucide-react"
+import { Shirt, Gem, Sparkles, ShoppingBag, ChevronLeft, ChevronRight } from "lucide-react"
 
 const Services = () => {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null)
@@ -82,7 +82,7 @@ const Services = () => {
     },
     {
       title: "LUXURY SOURCING",
-      icon: Diamond,
+      icon: Gem,
       description:
         "I specialize in sourcing highly sought-after designer pieces—from sold-out styles to rare collector items. With access to a trusted global network, each request is handled with discretion, speed, and authenticity. Perfect for clients who want the impossible made possible."
     },
