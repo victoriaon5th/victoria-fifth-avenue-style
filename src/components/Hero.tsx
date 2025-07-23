@@ -13,16 +13,15 @@ const Hero = () => {
         </div>
         
         <h1 className="font-serif text-5xl md:text-7xl font-bold text-foreground mb-6">
-          VICTORIA ON 5TH
+          VICTORIAON5TH
         </h1>
         
-        <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto font-light">
+        {/* <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto font-light">
           24/7 Conceirge for Fashion, Styling, Shopping, Sourcing
-        </p>
+        </p> */}
         
         <p className="text-lg text-muted-foreground mb-12 max-w-3xl mx-auto">
-          NYC-based personal stylist and shopping expert offering curated wardrobe solutions, 
-          luxury shopping experiences, and personalized styling for the modern professional.
+          A personalized fashion concierge service offering expert styling,  global luxury sourcing, and exclusive access to hard-to-find pieces—delivered worldwide.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
