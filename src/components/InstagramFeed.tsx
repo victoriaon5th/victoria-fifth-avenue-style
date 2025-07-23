@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogOverlay, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { InstagramEmbed } from 'react-social-media-embed';
+import { InstagramService } from "@/lib/instagramService";
 
 const InstagramFeed = () => {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
+  const [thumbnails, setThumbnails] = useState<Map<string, string>>(new Map());
 
   // Static Instagram post URLs
   const instagramUrls = [
@@ -30,6 +32,20 @@ const InstagramFeed = () => {
     "/lovable-uploads/c2fcb72d-a8d2-47b4-870b-77294a2700c6.png",
   ];
 
+  // Load Instagram thumbnails
+  useEffect(() => {
+    const loadThumbnails = async () => {
+      try {
+        const thumbnailMap = await InstagramService.downloadMultiplePosts(instagramUrls);
+        setThumbnails(thumbnailMap);
+      } catch (error) {
+        console.error('Failed to load Instagram thumbnails:', error);
+      }
+    };
+
+    loadThumbnails();
+  }, []);
+
   return (
     <div className="mb-16">
       <div className="text-center mb-12">
@@ -48,7 +64,7 @@ const InstagramFeed = () => {
             onClick={() => setSelectedImageIndex(index)}
           >
             <img 
-              src={fallbackImages[index % fallbackImages.length]} 
+              src={thumbnails.get(url) || fallbackImages[index % fallbackImages.length]} 
               alt={`Instagram post ${index + 1}`}
               className="w-24 h-24 md:w-32 md:h-32 object-cover rounded-lg shadow-md"
             />
