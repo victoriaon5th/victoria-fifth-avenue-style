@@ -1,4 +1,4 @@
 project_id = "inxxeepajmokwabzlfkx"
 
-[functions.add-instagram-posts]
+[functions.fetch-instagram-posts]
 verify_jwt = false
