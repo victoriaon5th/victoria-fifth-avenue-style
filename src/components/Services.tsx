@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import { Dialog, DialogContent, DialogOverlay, DialogTitle, DialogDescription } from "@/components/ui/dialog"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Scissors, Diamond, Sparkles, ShoppingBag, ChevronLeft, ChevronRight } from "lucide-react"
+import { Shirt, Diamond, Sparkles, ShoppingBag, ChevronLeft, ChevronRight } from "lucide-react"
 
 const Services = () => {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null)
@@ -77,7 +77,7 @@ const Services = () => {
   const services = [
     {
       title: "PERSONAL STYLING",
-      icon: Scissors,
+      icon: Shirt,
       description: "Outfits thoughtfully styled to align with your lifestyle, preferences, and body type. Whether you're building a seasonal wardrobe, dressing for an event, or refining your everyday look, styling is designed to make getting dressed effortless and elevated. Offered as a one-time service or on an ongoing basis."
     },
     {
