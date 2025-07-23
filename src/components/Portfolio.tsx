@@ -16,7 +16,7 @@ const Portfolio = () => {
     },
     {
       name: "Feturi Talaga",
-      photographer: "📸 Photographer: Victoria Rivkin",
+      photographer: "📸 Photographer: Michell Aragon",
       images: [
         "/lovable-uploads/0574d088-4aa6-4d51-b3ac-f405e9fafe0f.png",
         "/lovable-uploads/b9ee36f7-5869-4c0f-b57b-4c9265fab020.png",
