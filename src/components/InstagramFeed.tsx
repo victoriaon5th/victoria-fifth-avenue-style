@@ -125,17 +125,19 @@ const InstagramFeed = () => {
         <div className="w-24 h-1 bg-gold mx-auto mb-8"></div>
         <p className="text-muted-foreground mb-4">Latest from @victoriaon5th</p>
         
-        {/* Refresh button to fetch Instagram posts */}
-        <Button 
-          variant="outline" 
-          size="sm" 
-          onClick={refreshPosts}
-          disabled={refreshing}
-          className="mb-4"
-        >
-          <RefreshCw className={`w-4 h-4 mr-2 ${refreshing ? 'animate-spin' : ''}`} />
-          {refreshing ? 'Fetching Posts...' : instagramPosts.length > 0 ? 'Refresh Posts' : 'Fetch Instagram Posts'}
-        </Button>
+        {/* Refresh button for real Instagram posts */}
+        {instagramPosts.length > 0 && (
+          <Button 
+            variant="outline" 
+            size="sm" 
+            onClick={refreshPosts}
+            disabled={refreshing}
+            className="mb-4"
+          >
+            <RefreshCw className={`w-4 h-4 mr-2 ${refreshing ? 'animate-spin' : ''}`} />
+            {refreshing ? 'Refreshing...' : 'Refresh Posts'}
+          </Button>
+        )}
       </div>
       
       {loading ? (
