@@ -59,7 +59,7 @@ const InstagramFeed = () => {
       {/* Modal for viewing Instagram posts */}
       <Dialog open={selectedImageIndex !== null} onOpenChange={() => setSelectedImageIndex(null)}>
         <DialogOverlay className="bg-black/60" />
-        <DialogContent className="max-w-4xl w-full max-h-[90vh] p-0 border-0 bg-transparent shadow-none [&>button]:hidden" autoFocus>
+        <DialogContent className="max-w-4xl w-full max-h-[90vh] p-0 border-0 bg-transparent shadow-none [&>button]:hidden focus:outline-none focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0" autoFocus>
           <DialogTitle className="sr-only">Instagram Feed Gallery</DialogTitle>
           <DialogDescription className="sr-only">View Instagram posts. Use arrow keys or navigation buttons to browse.</DialogDescription>
           <div className="relative">
