@@ -13,7 +13,8 @@ const InstagramFeed = () => {
     "https://www.instagram.com/victoriaon5th/p/DMQXqvtOWvE/",
     "https://www.instagram.com/victoriaon5th/reel/DML5b2RSOHY/",
     "https://www.instagram.com/victoriaon5th/p/DMIuTnhurQc/",
-    "https://www.instagram.com/victoriaon5th/p/DL8EjT4pn2B/"
+    "https://www.instagram.com/victoriaon5th/p/DL8EjT4pn2B/",
+    "https://www.instagram.com/victoriaon5th/p/DLyIfnlSHtr/"
   ];
 
 
@@ -25,7 +26,8 @@ const InstagramFeed = () => {
     "/lovable-uploads/5e38da9c-9783-4d1a-8468-f4ecd7ec4b77.png",
     "/lovable-uploads/d4350772-58ae-4545-b1d5-75b0694598e1.png",
     "/lovable-uploads/b5ab16e9-c591-4067-988a-2fa45bb4dcfd.png",
-    "/lovable-uploads/89276be0-4957-4be1-949f-97d28d85d6f9.png"
+    "/lovable-uploads/89276be0-4957-4be1-949f-97d28d85d6f9.png",
+    "/lovable-uploads/d9a69deb-fa10-4e45-a010-1a2dde76e242.png"
   ];
 
   return (
