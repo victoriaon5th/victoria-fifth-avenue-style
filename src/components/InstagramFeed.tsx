@@ -37,7 +37,7 @@ const InstagramFeed = () => {
           FOLLOW MY JOURNEY
         </h3>
         <div className="w-24 h-1 bg-gold mx-auto mb-8"></div>
-        <p className="text-muted-foreground mb-4">Latest from @victoriaon5th</p>
+        {/* <p className="text-muted-foreground mb-4">Latest from @victoriaon5th</p> */}
       </div>
       
       <div className="flex flex-wrap justify-center gap-4 max-w-6xl mx-auto">
