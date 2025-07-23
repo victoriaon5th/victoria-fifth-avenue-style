@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Instagram } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -51,6 +52,15 @@ const Hero = () => {
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Get In Touch
+              </Button>
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="px-8 py-3 text-lg"
+                onClick={() => window.open('https://www.instagram.com/victoriaon5th/', '_blank', 'noopener,noreferrer')}
+              >
+                <Instagram className="w-5 h-5 mr-2" />
+                Instagram
               </Button>
             </div>
           </div>
