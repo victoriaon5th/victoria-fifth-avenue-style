@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Instagram, Sparkles } from "lucide-react";
+import { Instagram, Heart } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -45,7 +45,7 @@ const Hero = () => {
                          shadow-lg hover:shadow-xl flex items-center gap-2"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                <Sparkles size={20} />
+                <Heart size={20} />
                 Get In Touch
               </Button>
               <Button 
