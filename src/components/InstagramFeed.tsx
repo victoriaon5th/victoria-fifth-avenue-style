@@ -87,7 +87,7 @@ const InstagramFeed = () => {
             <Button
               variant="ghost"
               size="icon"
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 text-white bg-black/50 hover:bg-black/70 rounded-full w-10 h-10 focus-visible:ring-0 focus-visible:ring-offset-0"
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 z-50 text-white bg-black/50 hover:bg-black/70 rounded-full w-10 h-10 focus-visible:ring-0 focus-visible:ring-offset-0"
               onClick={(e) => {
                 e.preventDefault();
                 e.stopPropagation();
@@ -100,7 +100,7 @@ const InstagramFeed = () => {
             <Button
               variant="ghost"
               size="icon"
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 text-white bg-black/50 hover:bg-black/70 rounded-full w-10 h-10 focus-visible:ring-0 focus-visible:ring-offset-0"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 z-50 text-white bg-black/50 hover:bg-black/70 rounded-full w-10 h-10 focus-visible:ring-0 focus-visible:ring-offset-0"
               onClick={(e) => {
                 e.preventDefault();
                 e.stopPropagation();
