@@ -15,12 +15,12 @@ const Hero = () => {
           </div>
           
           {/* Right side - Content */}
-          <div className="order-1 lg:order-2 text-center lg:text-left">
+          <div className="order-1 lg:order-2 text-center">
             <div className="mb-6">
               <img 
                 src="/lovable-uploads/fd5d79e8-06a6-4f64-b7ca-4e8112a8fd32.png" 
                 alt="Victoria on 5th Logo" 
-                className="h-60 mx-auto lg:mx-0" 
+                className="h-60 mx-auto" 
               />
             </div>
             
@@ -32,11 +32,11 @@ const Hero = () => {
               24/7 Conceirge for Fashion, Styling, Shopping, Sourcing
             </p>
             
-            <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto lg:mx-0">
+            <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
               A personalized fashion concierge service offering expert styling,  global luxury sourcing, and exclusive access to hard-to-find pieces—delivered worldwide.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
                 className="px-8 py-3 text-lg"
