@@ -16,7 +16,7 @@ const About = () => {
                 />
               </div>
               <CardTitle className="font-serif text-2xl font-bold text-foreground">
-                Victoria Rivkin
+                About Me
               </CardTitle>
             </CardHeader>
             
