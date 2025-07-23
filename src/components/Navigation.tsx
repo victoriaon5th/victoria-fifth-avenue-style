@@ -21,11 +21,14 @@ const Navigation = () => {
     { name: 'About', href: '#about' },
     { name: 'Portfolio', href: '#portfolio' },
     { name: 'Contact', href: '#contact' },
+    { name: 'Curated Shops', href: 'https://linktr.ee/Victoriaon5th' },
   ];
 
   const scrollToSection = (href: string) => {
     if (href === '#') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (href.startsWith('http')) {
+      window.open(href, '_blank', 'noopener,noreferrer');
     } else {
       const element = document.querySelector(href);
       element?.scrollIntoView({ behavior: 'smooth' });
