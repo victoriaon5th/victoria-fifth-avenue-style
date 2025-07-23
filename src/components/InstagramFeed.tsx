@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Dialog, DialogOverlay, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import * as DialogPrimitive from "@radix-ui/react-dialog";
+import { Dialog, DialogContent, DialogOverlay, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { InstagramEmbed } from 'react-social-media-embed';
 
 const InstagramFeed = () => {
@@ -59,9 +58,8 @@ const InstagramFeed = () => {
 
       {/* Modal for viewing Instagram posts */}
       <Dialog open={selectedImageIndex !== null} onOpenChange={() => setSelectedImageIndex(null)}>
-        <DialogPrimitive.Portal>
-          <DialogOverlay className="bg-black/60" />
-          <DialogPrimitive.Content className="fixed left-[50%] top-[50%] z-50 w-full max-w-4xl max-h-[90vh] translate-x-[-50%] translate-y-[-50%] p-0 border-0 bg-transparent shadow-none duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0" autoFocus>
+        <DialogOverlay className="bg-black/60" />
+        <DialogContent className="max-w-4xl w-full max-h-[90vh] p-0 border-0 bg-transparent shadow-none [&>button]:!hidden [&>button]:!opacity-0 [&>button]:!pointer-events-none" autoFocus>
           <DialogTitle className="sr-only">Instagram Feed Gallery</DialogTitle>
           <DialogDescription className="sr-only">View Instagram posts.</DialogDescription>
           <div className="relative">
@@ -85,8 +83,7 @@ const InstagramFeed = () => {
               </div>
             )}
           </div>
-          </DialogPrimitive.Content>
-        </DialogPrimitive.Portal>
+        </DialogContent>
       </Dialog>
     </div>
   );
