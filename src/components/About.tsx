@@ -23,24 +23,15 @@ const About = () => {
             <CardContent className="text-center px-12 pb-12">
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  NYC-based personal stylist and shopping expert with 
-                  over five years of experience in the fashion industry. My career spans luxury 
-                  retail roles at Neiman Marcus and Saks Fifth Avenue to building a thriving 
-                  personal styling business, where I provide curated wardrobe solutions for 
-                  clients, models, and creative projects.
+                  Victoria is the founder of Victoriaon5th, a New York–based luxury sourcing and personal styling brand known for securing hard-to-find designer pieces with speed, discretion, and style.
                 </p>
                 
                 <p>
-                  At my roles at Saks Fifth Avenue and Neiman Marcus, I managed a multi-million-dollar 
-                  portfolio, styling high-profile clients, and exceeding sales goals through 
-                  personalized recommendations.
+                With over five years of experience in the fashion industry—including roles at Neiman Marcus and Saks Fifth Avenue—Victoria developed a strong foundation in luxury retail, managing multi-million-dollar portfolios and working closely with high-profile clientele.
                 </p>
                 
                 <p>
-                  As an independent stylist, I've collaborated with photographers and sourced 
-                  exclusive pieces to create standout looks for events like New York Fashion 
-                  Week. My personal shopping and styling services focus on delivering seamless, 
-                  high-touch experiences—from boutique access to event styling.
+                  Now, through Victoriaon5th, she specializes in sourcing rare, sold-out, and highly coveted fashion pieces—from iconic handbags to exclusive runway items. Her trusted global network allows her to track down what others can’t, making her the go-to for stylists, influencers, athletes, and fashion lovers who want the impossible made possible.     
                 </p>
                 
                 <p className="text-foreground font-medium">
