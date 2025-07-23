@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
@@ -51,16 +51,32 @@ const Navigation = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
-            {navItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => scrollToSection(item.href)}
-                className="text-foreground hover:text-gold transition-colors font-medium"
-              >
-                {item.name}
-              </button>
-            ))}
+          <div className="hidden md:flex space-x-8 items-center">
+            {navItems.map((item) => {
+              if (item.name === 'Curated Shops') {
+                return (
+                  <button
+                    key={item.name}
+                    onClick={() => scrollToSection(item.href)}
+                    className="magical-button px-4 py-2 rounded-full text-black font-semibold text-sm 
+                             transition-all duration-300 hover:scale-105 transform 
+                             shadow-lg hover:shadow-xl min-w-[140px] flex items-center gap-2"
+                  >
+                    <Sparkles size={16} />
+                    {item.name}
+                  </button>
+                );
+              }
+              return (
+                <button
+                  key={item.name}
+                  onClick={() => scrollToSection(item.href)}
+                  className="text-foreground hover:text-gold transition-colors font-medium"
+                >
+                  {item.name}
+                </button>
+              );
+            })}
           </div>
 
           {/* Mobile menu button */}
@@ -79,15 +95,30 @@ const Navigation = () => {
         {isOpen && (
           <div className="md:hidden absolute top-full left-0 w-full bg-background border-t shadow-lg">
             <div className="py-4">
-              {navItems.map((item) => (
-                <button
-                  key={item.name}
-                  onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left px-4 py-3 text-foreground hover:text-gold hover:bg-marble transition-colors"
-                >
-                  {item.name}
-                </button>
-              ))}
+              {navItems.map((item) => {
+                if (item.name === 'Curated Shops') {
+                  return (
+                    <button
+                      key={item.name}
+                      onClick={() => scrollToSection(item.href)}
+                      className="magical-button mx-4 my-2 px-4 py-3 rounded-full text-black font-semibold text-sm 
+                               flex items-center gap-2 justify-center w-auto"
+                    >
+                      <Sparkles size={16} />
+                      {item.name}
+                    </button>
+                  );
+                }
+                return (
+                  <button
+                    key={item.name}
+                    onClick={() => scrollToSection(item.href)}
+                    className="block w-full text-left px-4 py-3 text-foreground hover:text-gold hover:bg-marble transition-colors"
+                  >
+                    {item.name}
+                  </button>
+                );
+              })}
             </div>
           </div>
         )}
