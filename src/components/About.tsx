@@ -3,19 +3,19 @@ import InstagramFeed from "./InstagramFeed";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-background">
+    <section id="about" className="py-20 silk-section">
       <div className="container mx-auto px-4">
         <div className="flex justify-center">
-          <Card className="max-w-4xl w-full bg-card border-border shadow-lg">
+          <Card className="max-w-4xl w-full luxury-card">
             <CardHeader className="text-center pb-4">
               <div className="mx-auto mb-4">
                 <img 
                   src="/lovable-uploads/c2fcb72d-a8d2-47b4-870b-77294a2700c6.png" 
                   alt="Victoria Rivkin" 
-                  className="w-32 h-32 rounded-full object-cover mx-auto border-2 border-border"
+                  className="w-32 h-32 rounded-full object-cover mx-auto border-4 border-gold shadow-xl"
                 />
               </div>
-              <CardTitle className="font-serif text-2xl font-bold text-foreground">
+              <CardTitle className="luxury-heading text-3xl font-bold">
                 Victoria Rivkin
               </CardTitle>
             </CardHeader>

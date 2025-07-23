@@ -16,9 +16,9 @@ const Index = () => {
       <Contact />
       
       {/* Footer with Copyright */}
-      <footer className="bg-muted py-6 border-t border-border">
+      <footer className="silk-section py-8 border-t border-gold/20">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm text-muted-foreground font-light tracking-wide">
             © {new Date().getFullYear()} Victoria On 5th. All rights reserved.
           </p>
         </div>
