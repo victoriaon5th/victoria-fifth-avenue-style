@@ -77,27 +77,25 @@ const Services = () => {
   const services = [
     {
       title: "PERSONAL STYLING",
+      icon: Briefcase,
+      description: "Outfits thoughtfully styled to align with your lifestyle, preferences, and body type. Whether you're building a seasonal wardrobe, dressing for an event, or refining your everyday look, styling is designed to make getting dressed effortless and elevated. Offered as a one-time service or on an ongoing basis."
+    },
+    {
+      title: "LUXURY SOURCING",
       icon: Shirt,
       description:
-        "24/7 guidance for any desired peronsal style with curating looks for your lifestyle, body type, and personal brand\
-         that fit any need, want, budget, and body-type."
+        "I specialize in sourcing highly sought-after designer pieces—from sold-out styles to rare collector items. With access to a trusted global network, each request is handled with discretion, speed, and authenticity. Perfect for clients who want the impossible made possible."
     },
     {
-      title: "SHOPPING CONCEIRGE", 
+      title: "WARDROBE CONSULTING", 
       icon: ShoppingBag,
       description:
-        "Take the effort, knowledge, and time needed away by trusting me to handle all your shopping needs that'll fit the\
-         aesthitics, brands, budget, and trends for any ocasion or as long/often as you need."
+        "A full wardrobe review focused on identifying what works, what doesn’t, and what’s missing. The goal is to refine your style, fill in the gaps, and build a wardrobe that’s functional, polished, and aligned with your goals. Ideal for anyone in need of a reset or refresh."
     },
     {
-      title: "EXCLUSIVE SOURCING",
+      title: "CLOSET CLEANSE",
       icon: Gem,
-      description: "I make hard-to-find items easy to find for you to enjoy from luxury brands to rare collectables with my access/network to exclusive designers, owners, and traders."
-    },
-    {
-      title: "WARDROBE CONSULTING",
-      icon: Briefcase,
-      description: "Complete wardrobe analysis and strategic styling solutions for your day-day and/or special ocasions."
+      description: "A complete wardrobe edit to remove what no longer serves you. Pieces are reviewed, edited, and reorganized to ensure everything in your closet has purpose and versatility. Donation and resale support available upon request."
     }
   ];
 
