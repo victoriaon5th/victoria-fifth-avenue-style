@@ -71,7 +71,7 @@ const Contact = () => {
             </div>
             
             <div className="mt-8">
-              <Button size="lg" className="px-8 py-3">
+              <Button size="lg" className="px-8 py-3" asChild>
                 <a href="mailto:victoria@victoriaon5th.com">Start Your Style Journey</a>
               </Button>
             </div>
