@@ -1,23 +1,85 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogOverlay, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, RefreshCw } from "lucide-react";
+import { InstagramEmbed } from 'react-social-media-embed';
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
+
+interface InstagramPost {
+  id: string;
+  post_id: string;
+  post_url: string;
+  image_url: string | null;
+  caption: string | null;
+  timestamp: string | null;
+  created_at: string;
+  updated_at: string;
+}
 
 const InstagramFeed = () => {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
+  const [instagramPosts, setInstagramPosts] = useState<InstagramPost[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [refreshing, setRefreshing] = useState(false);
+  const { toast } = useToast();
 
-  // Instagram posts - these would ideally come from Instagram API
-  // For now, using placeholder images that represent Instagram posts
-  const instagramPosts = [
-    "/lovable-uploads/a4143735-3468-435b-ae94-2c9cbf11b9bb.png",
-    "/lovable-uploads/595977d6-0461-4619-81fa-636a1415f6a4.png",
-    "/lovable-uploads/298b98fc-ebe3-4f21-990f-0c0c8dc9ef1c.png",
-    "/lovable-uploads/718369cc-9717-4d75-b906-813b25d8fcdf.png",
-    "/lovable-uploads/6ba6c8d3-5787-4047-a55e-412af26cbfa9.png",
-    "/lovable-uploads/8a12cd36-d9d4-4d84-96b9-95d9b26c60a8.png",
-    "/lovable-uploads/bf44a68c-ce4e-43ca-b446-0d8f53be92b1.png",
-    "/lovable-uploads/c2fcb72d-a8d2-47b4-870b-77294a2700c6.png",
-  ];
+  // Fetch posts from database
+  const fetchPosts = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('instagram_posts')
+        .select('*')
+        .order('timestamp', { ascending: false })
+        .limit(8);
+
+      if (error) throw error;
+      
+      setInstagramPosts(data || []);
+    } catch (error) {
+      console.error('Error fetching Instagram posts:', error);
+      toast({
+        title: "Error",
+        description: "Failed to load Instagram posts",
+        variant: "destructive",
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Refresh posts from Instagram
+  const refreshPosts = async () => {
+    setRefreshing(true);
+    try {
+      const response = await supabase.functions.invoke('fetch-instagram-posts', {
+        body: { username: 'victoriarivkin' } // Replace with actual Instagram username
+      });
+
+      if (response.error) throw response.error;
+      
+      // Refresh the local data
+      await fetchPosts();
+      
+      toast({
+        title: "Success",
+        description: `Refreshed ${response.data?.processed || 0} Instagram posts`,
+      });
+    } catch (error) {
+      console.error('Error refreshing Instagram posts:', error);
+      toast({
+        title: "Error", 
+        description: "Failed to refresh Instagram posts",
+        variant: "destructive",
+      });
+    } finally {
+      setRefreshing(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchPosts();
+  }, []);
 
   const nextImage = () => {
     if (selectedImageIndex !== null) {
@@ -31,6 +93,29 @@ const InstagramFeed = () => {
     }
   };
 
+  // Fallback to placeholder images if no posts are loaded
+  const fallbackImages = [
+    "/lovable-uploads/a4143735-3468-435b-ae94-2c9cbf11b9bb.png",
+    "/lovable-uploads/595977d6-0461-4619-81fa-636a1415f6a4.png",
+    "/lovable-uploads/298b98fc-ebe3-4f21-990f-0c0c8dc9ef1c.png",
+    "/lovable-uploads/718369cc-9717-4d75-b906-813b25d8fcdf.png",
+    "/lovable-uploads/6ba6c8d3-5787-4047-a55e-412af26cbfa9.png",
+    "/lovable-uploads/8a12cd36-d9d4-4d84-96b9-95d9b26c60a8.png",
+    "/lovable-uploads/bf44a68c-ce4e-43ca-b446-0d8f53be92b1.png",
+    "/lovable-uploads/c2fcb72d-a8d2-47b4-870b-77294a2700c6.png",
+  ];
+
+  const displayPosts = instagramPosts.length > 0 ? instagramPosts : fallbackImages.map((img, index) => ({
+    id: `fallback-${index}`,
+    post_id: `fallback-${index}`,
+    post_url: `#${index}`,
+    image_url: img,
+    caption: null,
+    timestamp: null,
+    created_at: '',
+    updated_at: ''
+  }));
+
   return (
     <div className="mb-16">
       <div className="text-center mb-12">
@@ -39,23 +124,44 @@ const InstagramFeed = () => {
         </h3>
         <div className="w-24 h-1 bg-gold mx-auto mb-8"></div>
         <p className="text-muted-foreground mb-4">Latest from @victoriaon5th</p>
+        
+        {/* Refresh button for real Instagram posts */}
+        {instagramPosts.length > 0 && (
+          <Button 
+            variant="outline" 
+            size="sm" 
+            onClick={refreshPosts}
+            disabled={refreshing}
+            className="mb-4"
+          >
+            <RefreshCw className={`w-4 h-4 mr-2 ${refreshing ? 'animate-spin' : ''}`} />
+            {refreshing ? 'Refreshing...' : 'Refresh Posts'}
+          </Button>
+        )}
       </div>
       
-      <div className="flex flex-wrap justify-center gap-4 max-w-6xl mx-auto">
-        {instagramPosts.map((image, index) => (
-          <div 
-            key={index}
-            className="cursor-pointer transition-all duration-300 hover:opacity-80 hover:scale-105"
-            onClick={() => setSelectedImageIndex(index)}
-          >
-            <img 
-              src={image} 
-              alt={`Instagram post ${index + 1}`}
-              className="w-24 h-24 md:w-32 md:h-32 object-cover rounded-lg shadow-md"
-            />
-          </div>
-        ))}
-      </div>
+      {loading ? (
+        <div className="text-center py-12">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto"></div>
+          <p className="mt-4 text-muted-foreground">Loading Instagram posts...</p>
+        </div>
+      ) : (
+        <div className="flex flex-wrap justify-center gap-4 max-w-6xl mx-auto">
+          {displayPosts.map((post, index) => (
+            <div 
+              key={post.id}
+              className="cursor-pointer transition-all duration-300 hover:opacity-80 hover:scale-105"
+              onClick={() => setSelectedImageIndex(index)}
+            >
+              <img 
+                src={post.image_url || fallbackImages[index % fallbackImages.length]} 
+                alt={`Instagram post ${index + 1}`}
+                className="w-24 h-24 md:w-32 md:h-32 object-cover rounded-lg shadow-md"
+              />
+            </div>
+          ))}
+        </div>
+      )}
 
       {/* Modal for viewing Instagram posts */}
       <Dialog open={selectedImageIndex !== null} onOpenChange={() => setSelectedImageIndex(null)}>
@@ -98,12 +204,25 @@ const InstagramFeed = () => {
               <ChevronRight className="h-4 w-4" />
             </Button>
 
-            {selectedImageIndex !== null && (
-              <img 
-                src={instagramPosts[selectedImageIndex]} 
-                alt="Instagram post"
-                className="w-full h-auto max-h-[85vh] object-contain rounded-lg"
-              />
+            {selectedImageIndex !== null && displayPosts[selectedImageIndex] && (
+              <div className="flex justify-center">
+                {instagramPosts.length > 0 && displayPosts[selectedImageIndex].post_url !== `#${selectedImageIndex}` ? (
+                  // Show Instagram embed for real posts
+                  <div className="bg-white rounded-lg p-4 max-w-md">
+                    <InstagramEmbed 
+                      url={displayPosts[selectedImageIndex].post_url} 
+                      width={400}
+                    />
+                  </div>
+                ) : (
+                  // Show image for fallback posts
+                  <img 
+                    src={displayPosts[selectedImageIndex].image_url || fallbackImages[selectedImageIndex % fallbackImages.length]} 
+                    alt="Instagram post"
+                    className="w-full h-auto max-h-[85vh] object-contain rounded-lg"
+                  />
+                )}
+              </div>
             )}
           </div>
         </DialogContent>
