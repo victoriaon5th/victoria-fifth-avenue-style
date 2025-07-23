@@ -33,7 +33,7 @@ const Portfolio = () => {
       photographer: "📸 Photographer: Iska",
       images: [
         "/lovable-uploads/0099d211-ec80-4da3-891a-2acc53c57efc.png",
-        "/lovable-uploads/8696787e-c1a3-4155-bda6-db32030c364b.png",
+        "/lovable-uploads/2a903f3a-14c3-4a0b-bad4-18746a0c0e47.png",
         "/lovable-uploads/42cd101f-002f-4c32-847b-72afa68a6f33.png"
       ]
     },
