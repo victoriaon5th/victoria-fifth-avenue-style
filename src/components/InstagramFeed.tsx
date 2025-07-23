@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogOverlay, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight, RefreshCw } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { ChevronLeft, ChevronRight, Plus, X } from "lucide-react";
 import { InstagramEmbed } from 'react-social-media-embed';
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
@@ -21,7 +23,9 @@ const InstagramFeed = () => {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
   const [instagramPosts, setInstagramPosts] = useState<InstagramPost[]>([]);
   const [loading, setLoading] = useState(true);
-  const [refreshing, setRefreshing] = useState(false);
+  const [adding, setAdding] = useState(false);
+  const [showAddForm, setShowAddForm] = useState(false);
+  const [newPostUrls, setNewPostUrls] = useState('');
   const { toast } = useToast();
 
   // Fetch posts from database
@@ -48,32 +52,52 @@ const InstagramFeed = () => {
     }
   };
 
-  // Refresh posts from Instagram
-  const refreshPosts = async () => {
-    setRefreshing(true);
+  // Add new posts
+  const addPosts = async () => {
+    if (!newPostUrls.trim()) return;
+    
+    setAdding(true);
     try {
-      const response = await supabase.functions.invoke('fetch-instagram-posts', {
-        body: { username: 'victoriarivkin' } // Replace with actual Instagram username
+      // Parse URLs from textarea (one per line)
+      const urls = newPostUrls
+        .split('\n')
+        .map(url => url.trim())
+        .filter(url => url.includes('instagram.com'))
+        .filter(url => url.length > 0);
+
+      if (urls.length === 0) {
+        toast({
+          title: "Error",
+          description: "Please enter valid Instagram post URLs",
+          variant: "destructive",
+        });
+        return;
+      }
+
+      const response = await supabase.functions.invoke('add-instagram-posts', {
+        body: { postUrls: urls }
       });
 
       if (response.error) throw response.error;
       
       // Refresh the local data
       await fetchPosts();
+      setNewPostUrls('');
+      setShowAddForm(false);
       
       toast({
         title: "Success",
-        description: `Refreshed ${response.data?.processed || 0} Instagram posts`,
+        description: `Added ${response.data?.processed || 0} Instagram posts`,
       });
     } catch (error) {
-      console.error('Error refreshing Instagram posts:', error);
+      console.error('Error adding Instagram posts:', error);
       toast({
         title: "Error", 
-        description: "Failed to refresh Instagram posts",
+        description: "Failed to add Instagram posts",
         variant: "destructive",
       });
     } finally {
-      setRefreshing(false);
+      setAdding(false);
     }
   };
 
@@ -83,13 +107,13 @@ const InstagramFeed = () => {
 
   const nextImage = () => {
     if (selectedImageIndex !== null) {
-      setSelectedImageIndex((selectedImageIndex + 1) % instagramPosts.length);
+      setSelectedImageIndex((selectedImageIndex + 1) % displayPosts.length);
     }
   };
 
   const previousImage = () => {
     if (selectedImageIndex !== null) {
-      setSelectedImageIndex((selectedImageIndex - 1 + instagramPosts.length) % instagramPosts.length);
+      setSelectedImageIndex((selectedImageIndex - 1 + displayPosts.length) % displayPosts.length);
     }
   };
 
@@ -125,17 +149,46 @@ const InstagramFeed = () => {
         <div className="w-24 h-1 bg-gold mx-auto mb-8"></div>
         <p className="text-muted-foreground mb-4">Latest from @victoriaon5th</p>
         
-        {/* Refresh button to fetch Instagram posts */}
+        {/* Add posts button */}
         <Button 
           variant="outline" 
           size="sm" 
-          onClick={refreshPosts}
-          disabled={refreshing}
+          onClick={() => setShowAddForm(!showAddForm)}
           className="mb-4"
         >
-          <RefreshCw className={`w-4 h-4 mr-2 ${refreshing ? 'animate-spin' : ''}`} />
-          {refreshing ? 'Fetching Posts...' : instagramPosts.length > 0 ? 'Refresh Posts' : 'Fetch Instagram Posts'}
+          <Plus className="w-4 h-4 mr-2" />
+          {instagramPosts.length > 0 ? 'Add More Posts' : 'Add Instagram Posts'}
         </Button>
+        
+        {/* Add posts form */}
+        {showAddForm && (
+          <div className="max-w-md mx-auto mb-6 p-4 border rounded-lg bg-background">
+            <h4 className="font-semibold mb-3">Add Instagram Posts</h4>
+            <Textarea
+              placeholder="Paste Instagram post URLs here (one per line)&#10;Example:&#10;https://www.instagram.com/p/ABC123/&#10;https://www.instagram.com/p/DEF456/"
+              value={newPostUrls}
+              onChange={(e) => setNewPostUrls(e.target.value)}
+              className="mb-3"
+              rows={4}
+            />
+            <div className="flex gap-2">
+              <Button 
+                onClick={addPosts}
+                disabled={adding || !newPostUrls.trim()}
+                size="sm"
+              >
+                {adding ? 'Adding...' : 'Add Posts'}
+              </Button>
+              <Button 
+                variant="outline"
+                onClick={() => setShowAddForm(false)}
+                size="sm"
+              >
+                Cancel
+              </Button>
+            </div>
+          </div>
+        )}
       </div>
       
       {loading ? (
