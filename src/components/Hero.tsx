@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Instagram } from "lucide-react";
+import { Instagram, Sparkles } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -38,21 +38,15 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
-                className="px-8 py-3 text-lg"
-                onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Explore Services
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="px-8 py-3 text-lg"
+              <button
+                className="magical-button px-8 py-3 rounded-full text-black font-semibold text-lg 
+                         transition-all duration-300 hover:scale-105 transform 
+                         shadow-lg hover:shadow-xl flex items-center gap-2 justify-center"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
+                <Sparkles size={20} />
                 Get In Touch
-              </Button>
+              </button>
               <Button 
                 variant="outline" 
                 size="lg" 
