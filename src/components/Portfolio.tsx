@@ -227,12 +227,8 @@ const Portfolio = () => {
               <Button
                 variant="outline"
                 size="icon"
-                tabIndex={-1}
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white z-10 focus-visible:ring-0 focus-visible:ring-offset-0 outline-none focus:outline-none"
-                onMouseDown={(e) => e.preventDefault()}
-                onClick={() => {
-                  prevModalImage();
-                }}
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white z-10"
+                onClick={prevModalImage}
               >
                 <ChevronLeft className="h-4 w-4" />
               </Button>
@@ -240,12 +236,8 @@ const Portfolio = () => {
               <Button
                 variant="outline"
                 size="icon"
-                tabIndex={-1}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white z-10 focus-visible:ring-0 focus-visible:ring-offset-0 outline-none focus:outline-none"
-                onMouseDown={(e) => e.preventDefault()}
-                onClick={() => {
-                  nextModalImage();
-                }}
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white z-10"
+                onClick={nextModalImage}
               >
                 <ChevronRight className="h-4 w-4" />
               </Button>
