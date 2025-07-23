@@ -50,7 +50,7 @@ const InstagramFeed = () => {
             <img 
               src={fallbackImages[index % fallbackImages.length]} 
               alt={`Instagram post ${index + 1}`}
-              className="w-24 h-24 md:w-32 md:h-32 object-cover rounded-lg shadow-md"
+              className="w-24 h-24 md:w-32 md:h-32 object-cover rounded-lg shadow-md scale-110"
             />
           </div>
         ))}
