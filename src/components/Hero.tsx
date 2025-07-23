@@ -4,13 +4,13 @@ const Hero = () => {
   return (
     <section className="min-h-screen flex items-center bg-background">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Left side - Image */}
-          <div className="order-2 lg:order-1 flex justify-center lg:justify-end">
+          <div className="order-2 lg:order-1">
             <img 
               src="/lovable-uploads/2fa1efde-823c-4f71-85c9-76de1e332c1e.png" 
               alt="Victoria on 5th Fashion Styling" 
-              className="w-4/5 max-w-md h-auto rounded-lg shadow-lg" 
+              className="w-full h-auto rounded-lg shadow-lg" 
             />
           </div>
           
