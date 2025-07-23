@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import { Dialog, DialogContent, DialogOverlay, DialogTitle, DialogDescription } from "@/components/ui/dialog"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Shirt, ShoppingBag, Gem, Briefcase, ChevronLeft, ChevronRight } from "lucide-react"
+import { Scissors, Diamond, Sparkles, ShoppingBag, ChevronLeft, ChevronRight } from "lucide-react"
 
 const Services = () => {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null)
@@ -77,12 +77,12 @@ const Services = () => {
   const services = [
     {
       title: "PERSONAL STYLING",
-      icon: Briefcase,
+      icon: Scissors,
       description: "Outfits thoughtfully styled to align with your lifestyle, preferences, and body type. Whether you're building a seasonal wardrobe, dressing for an event, or refining your everyday look, styling is designed to make getting dressed effortless and elevated. Offered as a one-time service or on an ongoing basis."
     },
     {
       title: "LUXURY SOURCING",
-      icon: Shirt,
+      icon: Diamond,
       description:
         "I specialize in sourcing highly sought-after designer pieces—from sold-out styles to rare collector items. With access to a trusted global network, each request is handled with discretion, speed, and authenticity. Perfect for clients who want the impossible made possible."
     },
@@ -94,7 +94,7 @@ const Services = () => {
     },
     {
       title: "CLOSET CLEANSE",
-      icon: Gem,
+      icon: Sparkles,
       description: "A complete wardrobe edit to remove what no longer serves you. Pieces are reviewed, edited, and reorganized to ensure everything in your closet has purpose and versatility. Donation and resale support available upon request."
     }
   ];
