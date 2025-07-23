@@ -10,7 +10,8 @@ const Portfolio = () => {
       photographer: "📸 Photographer: Iska",
       images: [
         "/lovable-uploads/a8e35b1a-708f-4ba3-9d47-469dd250b7b1.png",
-        "/lovable-uploads/d758375f-8c65-4d67-b3da-f982b990c47b.png"
+        "/lovable-uploads/d758375f-8c65-4d67-b3da-f982b990c47b.png",
+        "/lovable-uploads/0b47e393-a4cc-4b73-8768-77bfc3fd6044.png"
       ]
     },
     {
@@ -18,7 +19,13 @@ const Portfolio = () => {
       photographer: "📸 Photographer: Victoria Rivkin",
       images: [
         "/lovable-uploads/0574d088-4aa6-4d51-b3ac-f405e9fafe0f.png",
-        "/lovable-uploads/b9ee36f7-5869-4c0f-b57b-4c9265fab020.png"
+        "/lovable-uploads/b9ee36f7-5869-4c0f-b57b-4c9265fab020.png",
+        "/lovable-uploads/f5db9202-2cc7-4545-980e-3275d482e284.png",
+        "/lovable-uploads/7f77ab43-4bd5-4b3e-893b-4b405f25c9c7.png",
+        "/lovable-uploads/2f9dd53a-048a-4e12-9581-e02a72735db9.png",
+        "/lovable-uploads/c3513d4f-0997-40e9-b653-9408e977914d.png",
+        "/lovable-uploads/c6c2b612-b98b-4a21-9bda-1de6f3923429.png",
+        "/lovable-uploads/baf624f1-2526-49e1-8307-a0936e5c0575.png"
       ]
     },
     {
@@ -26,7 +33,8 @@ const Portfolio = () => {
       photographer: "📸 Photographer: Iska",
       images: [
         "/lovable-uploads/0099d211-ec80-4da3-891a-2acc53c57efc.png",
-        "/lovable-uploads/8696787e-c1a3-4155-bda6-db32030c364b.png"
+        "/lovable-uploads/8696787e-c1a3-4155-bda6-db32030c364b.png",
+        "/lovable-uploads/42cd101f-002f-4c32-847b-72afa68a6f33.png"
       ]
     },
     {
@@ -34,7 +42,9 @@ const Portfolio = () => {
       photographer: "📸 Photographer: Jake Sundean",
       images: [
         "/lovable-uploads/1c8fb29d-8b2c-4568-be8c-7901de2f086f.png",
-        "/lovable-uploads/1ddff1f2-6361-487f-a694-c7e0cea92bc0.png"
+        "/lovable-uploads/1ddff1f2-6361-487f-a694-c7e0cea92bc0.png",
+        "/lovable-uploads/c45431e7-0442-469e-bdc9-e8ca1a030bb2.png",
+        "/lovable-uploads/20136130-7799-48bf-b17e-58af7c871cf5.png"
       ]
     }
   ];
@@ -45,7 +55,8 @@ const Portfolio = () => {
   const nextSlide = (clientIndex: number) => {
     setCurrentIndices(prev => {
       const newIndices = [...prev];
-      newIndices[clientIndex] = newIndices[clientIndex] === 1 ? 0 : 1;
+      const currentClient = clients[clientIndex];
+      newIndices[clientIndex] = newIndices[clientIndex] === currentClient.images.length - 1 ? 0 : newIndices[clientIndex] + 1;
       return newIndices;
     });
   };
@@ -53,7 +64,8 @@ const Portfolio = () => {
   const prevSlide = (clientIndex: number) => {
     setCurrentIndices(prev => {
       const newIndices = [...prev];
-      newIndices[clientIndex] = newIndices[clientIndex] === 0 ? 1 : 0;
+      const currentClient = clients[clientIndex];
+      newIndices[clientIndex] = newIndices[clientIndex] === 0 ? currentClient.images.length - 1 : newIndices[clientIndex] - 1;
       return newIndices;
     });
   };
