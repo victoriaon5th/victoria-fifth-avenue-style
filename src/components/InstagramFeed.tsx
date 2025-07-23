@@ -23,7 +23,7 @@ const InstagramFeed = () => {
     "/lovable-uploads/d9a69deb-fa10-4e45-a010-1a2dde76e242.png",
     "/lovable-uploads/5b6c7c5b-2b94-4950-aa99-01ad97de88e9.png",
     "/lovable-uploads/2c1a8056-3b0c-4bdd-a169-1923a534a7f9.png",
-    "/lovable-uploads/c7aa7398-aeaa-402d-9128-9da526e03776.png",
+    "/lovable-uploads/0f6eee52-27fe-474f-b60f-f9b3f2634411.png",
     "/lovable-uploads/d4350772-58ae-4545-b1d5-75b0694598e1.png",
     "/lovable-uploads/b5ab16e9-c591-4067-988a-2fa45bb4dcfd.png",
     "/lovable-uploads/89276be0-4957-4be1-949f-97d28d85d6f9.png",
