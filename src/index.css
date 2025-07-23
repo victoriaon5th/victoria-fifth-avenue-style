@@ -31,23 +31,11 @@ All colors MUST be HSL.
 
     --gold: 45 100% 51%;
     --gold-glow: 45 100% 65%;
-    --rose-gold: 15 75% 65%;
-    --blush: 350 100% 95%;
-    --champagne: 45 50% 90%;
     --marble: 240 5% 96%;
-    --pearl: 60 20% 98%;
-    --silk: 50 15% 95%;
     
-    /* Luxury gradients */
+    /* Magical gradient for special buttons */
     --gradient-magic: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-glow)), hsl(var(--gold)));
-    --gradient-rose: linear-gradient(135deg, hsl(var(--rose-gold)), hsl(var(--gold)), hsl(var(--rose-gold)));
-    --gradient-silk: linear-gradient(180deg, hsl(var(--silk)), hsl(var(--pearl)));
-    --gradient-blush: linear-gradient(135deg, hsl(var(--blush)), hsl(var(--champagne)));
-    
-    /* Luxury shadows */
     --shadow-magic: 0 0 20px hsl(var(--gold) / 0.3), 0 0 40px hsl(var(--gold) / 0.1);
-    --shadow-elegant: 0 8px 32px hsl(var(--gold) / 0.15);
-    --shadow-soft: 0 4px 16px hsl(var(--rose-gold) / 0.1);
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -125,7 +113,7 @@ All colors MUST be HSL.
 }
 
 @layer components {
-  /* Luxury button styles */
+  /* Magical sparkle button */
   .magical-button {
     @apply relative overflow-hidden;
     background: var(--gradient-magic);
@@ -153,44 +141,6 @@ All colors MUST be HSL.
     transform: translateY(-50%);
     animation: sparkle 1.5s ease-in-out infinite;
     pointer-events: none;
-  }
-
-  /* Luxury card styles */
-  .luxury-card {
-    background: var(--gradient-silk);
-    box-shadow: var(--shadow-elegant);
-    border: 1px solid hsl(var(--gold) / 0.2);
-    @apply transition-all duration-300 hover:shadow-xl;
-  }
-
-  .luxury-card:hover {
-    box-shadow: var(--shadow-magic);
-    transform: translateY(-2px);
-  }
-
-  /* Elegant section backgrounds */
-  .silk-section {
-    background: var(--gradient-silk);
-  }
-
-  .blush-section {
-    background: var(--gradient-blush);
-  }
-
-  /* Luxury typography */
-  .luxury-heading {
-    background: var(--gradient-rose);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    @apply font-serif tracking-wide;
-  }
-
-  /* Elegant dividers */
-  .luxury-divider {
-    background: var(--gradient-rose);
-    @apply h-0.5 w-24 mx-auto;
-    box-shadow: 0 0 10px hsl(var(--gold) / 0.3);
   }
 }
 

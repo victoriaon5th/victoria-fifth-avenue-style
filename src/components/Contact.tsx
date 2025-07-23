@@ -4,15 +4,14 @@ import { Button } from "@/components/ui/button";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 blush-section">
+    <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           <div>
-            <h2 className="luxury-heading text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-8">
               GET IN TOUCH
             </h2>
-            <div className="luxury-divider mb-8"></div>
             
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
               Whether it's a wardrobe refresh or the hunt for a rare designer piece, Victoria’s goal is to make fashion feel fun, stress-free, and uniquely personal. Her approach blends expertise with ease—so every client walks away feeling confident, elevated, and effortlessly styled.
@@ -20,7 +19,7 @@ const Contact = () => {
             
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-gold to-rose-gold rounded-full flex items-center justify-center shadow-lg">
+                <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center">
                   <Mail className="h-5 w-5 text-background" />
                 </div>
                 <div>
@@ -36,7 +35,7 @@ const Contact = () => {
               
               
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-gold to-rose-gold rounded-full flex items-center justify-center shadow-lg">
+                <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center">
                   <Instagram className="h-5 w-5 text-background" />
                 </div>
                   <div>
@@ -72,7 +71,7 @@ const Contact = () => {
             </div>
             
             <div className="mt-8">
-              <Button size="lg" className="px-8 py-3 magical-button border-0 text-black font-medium">
+              <Button size="lg" className="px-8 py-3">
                 <a href="mailto:victoria@victoriaon5th.com">Start Your Style Journey</a>
               </Button>
             </div>

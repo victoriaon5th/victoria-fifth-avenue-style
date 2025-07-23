@@ -100,25 +100,25 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 blush-section">
+    <section id="services" className="py-20 bg-marble">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="luxury-heading text-4xl md:text-6xl font-bold mb-6">
+          <h2 className="font-serif text-4xl md:text-6xl font-bold text-foreground mb-6">
             SERVICES
           </h2>
-          <div className="luxury-divider mb-8"></div>
+          <div className="w-24 h-1 bg-gold mx-auto mb-8"></div>
         </div>
         
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
-              <Card key={index} className="text-center luxury-card">
+              <Card key={index} className="text-center">
                 <CardContent className="p-8">
-                  <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-gold/20 to-rose-gold/20 rounded-full flex items-center justify-center shadow-lg">
-                    <IconComponent className="h-8 w-8 text-gold drop-shadow-sm" />
+                  <div className="w-16 h-16 mx-auto mb-6 bg-gold/10 rounded-full flex items-center justify-center">
+                    <IconComponent className="h-8 w-8 text-gold" />
                   </div>
-                  <h3 className="font-serif text-2xl text-gold mb-4 tracking-wide font-bold">
+                  <h3 className="font-serif text-2xl text-gold mb-4 tracking-wide">
                     {service.title}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -133,10 +133,10 @@ const Services = () => {
         {/* Client Love Section */}
         <div className="mt-20">
           <div className="text-center mb-12">
-            <h2 className="luxury-heading text-4xl md:text-6xl font-bold mb-6">
+            <h2 className="font-serif text-4xl md:text-6xl font-bold text-foreground mb-6">
               TESTIMONIALS
             </h2>
-            <div className="luxury-divider mb-8"></div>
+            <div className="w-24 h-1 bg-gold mx-auto mb-8"></div>
           </div>
           
           <div className="flex flex-wrap justify-center gap-4 max-w-6xl mx-auto">

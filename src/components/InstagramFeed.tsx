@@ -33,10 +33,10 @@ const InstagramFeed = () => {
   return (
     <div className="mb-16">
       <div className="text-center mb-12">
-        <h3 className="luxury-heading text-3xl md:text-4xl font-bold mb-6">
+        <h3 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
           FOLLOW MY JOURNEY
         </h3>
-        <div className="luxury-divider mb-8"></div>
+        <div className="w-24 h-1 bg-gold mx-auto mb-8"></div>
         {/* <p className="text-muted-foreground mb-4">Latest from @victoriaon5th</p> */}
       </div>
       
