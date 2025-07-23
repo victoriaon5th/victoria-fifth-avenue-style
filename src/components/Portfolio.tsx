@@ -168,27 +168,23 @@ const Portfolio = () => {
               </div>
 
               {/* Navigation */}
-              {client.images.length > 1 && (
-                <>
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    className="absolute left-3 top-1/2 transform -translate-y-1/2 bg-white/95 hover:bg-white focus:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 shadow-lg z-10 w-10 h-10"
-                    onClick={() => prevSlide(clientIndex)}
-                  >
-                    <ChevronLeft className="h-5 w-5" />
-                  </Button>
-                  
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-white/95 hover:bg-white focus:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 shadow-lg z-10 w-10 h-10"
-                    onClick={() => nextSlide(clientIndex)}
-                  >
-                    <ChevronRight className="h-5 w-5" />
-                  </Button>
-                </>
-              )}
+              <Button
+                variant="outline"
+                size="icon"
+                className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white focus:outline-none focus-visible:ring-0 focus-visible:ring-offset-0"
+                onClick={() => prevSlide(clientIndex)}
+              >
+                <ChevronLeft className="h-3 w-3" />
+              </Button>
+              
+              <Button
+                variant="outline"
+                size="icon"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white focus:outline-none focus-visible:ring-0 focus-visible:ring-offset-0"
+                onClick={() => nextSlide(clientIndex)}
+              >
+                <ChevronRight className="h-3 w-3" />
+              </Button>
 
               {/* Dots */}
               <div className="flex justify-center mt-4 space-x-2">
