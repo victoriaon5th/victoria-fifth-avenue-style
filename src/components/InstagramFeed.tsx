@@ -20,14 +20,14 @@ const InstagramFeed = () => {
 
   // Fallback images for thumbnails
   const fallbackImages = [
-    "/lovable-uploads/a4143735-3468-435b-ae94-2c9cbf11b9bb.png",
-    "/lovable-uploads/595977d6-0461-4619-81fa-636a1415f6a4.png",
-    "/lovable-uploads/298b98fc-ebe3-4f21-990f-0c0c8dc9ef1c.png",
-    "/lovable-uploads/718369cc-9717-4d75-b906-813b25d8fcdf.png",
-    "/lovable-uploads/6ba6c8d3-5787-4047-a55e-412af26cbfa9.png",
-    "/lovable-uploads/8a12cd36-d9d4-4d84-96b9-95d9b26c60a8.png",
-    "/lovable-uploads/bf44a68c-ce4e-43ca-b446-0d8f53be92b1.png",
-    "/lovable-uploads/c2fcb72d-a8d2-47b4-870b-77294a2700c6.png",
+    "/lovable-uploads/1044fbe9-b927-45ba-9866-2c390be09660.png",
+    "/lovable-uploads/c35c07ba-ab91-4aab-9020-5efe4fb07223.png",
+    "/lovable-uploads/1c5b3387-93e5-4056-a6df-7e91f7d1c18e.png",
+    "/lovable-uploads/f266ca07-cc75-459c-a019-9d78416976a7.png",
+    "/lovable-uploads/8b66cb04-65fb-49f6-b332-f595e3e15bcc.png",
+    "/lovable-uploads/50e1f33d-01c8-46d9-81c9-5656acc860ef.png",
+    "/lovable-uploads/c7e6f21b-f7b9-4876-b405-3db11ef587b4.png",
+    "/lovable-uploads/4f1169b1-97a3-43e5-9557-b317a3b3aa77.png",
   ];
 
   return (
