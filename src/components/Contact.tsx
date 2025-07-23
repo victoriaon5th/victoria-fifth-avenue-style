@@ -14,8 +14,7 @@ const Contact = () => {
             </h2>
             
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Ready to elevate your style? Let's discuss how we can create your perfect wardrobe 
-              and enhance your personal brand through fashion.
+              Whether it's a wardrobe refresh or the hunt for a rare designer piece, Victoria’s goal is to make fashion feel fun, stress-free, and uniquely personal. Her approach blends expertise with ease—so every client walks away feeling confident, elevated, and effortlessly styled.
             </p>
             
             <div className="space-y-6">
