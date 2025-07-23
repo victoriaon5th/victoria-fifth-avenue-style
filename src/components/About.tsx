@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import InstagramFeed from "./InstagramFeed";
 
 const About = () => {
   return (
@@ -51,6 +52,7 @@ const About = () => {
             </CardContent>
           </Card>
         </div>
+        <InstagramFeed />
       </div>
     </section>
   );

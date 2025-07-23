@@ -1,12 +1,12 @@
 import { Mail, Phone, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import InstagramFeed from "./InstagramFeed";
+
 
 const Contact = () => {
   return (
     <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <InstagramFeed />
+        
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           <div>
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-8">
