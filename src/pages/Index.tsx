@@ -14,6 +14,15 @@ const Index = () => {
       <About />
       <Portfolio />
       <Contact />
+      
+      {/* Footer with Copyright */}
+      <footer className="bg-muted py-6 border-t border-border">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-sm text-muted-foreground">
+            © {new Date().getFullYear()} Victoria Rivkin. All rights reserved.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };
