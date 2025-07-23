@@ -52,7 +52,9 @@ const About = () => {
             </CardContent>
           </Card>
         </div>
-        <InstagramFeed />
+        <div className="mt-16">
+          <InstagramFeed />
+        </div>
       </div>
     </section>
   );
