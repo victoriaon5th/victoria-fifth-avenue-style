@@ -92,7 +92,7 @@ const Contact = () => {
             </div>
           </div>
           
-          <div>
+          <div className="flex justify-center lg:justify-start">
             <img 
               src="/lovable-uploads/92bfb58b-5983-4268-b446-4f2b179cfe57.png" 
               alt="Victoria Rivkin Fashion Stylist Logo" 
