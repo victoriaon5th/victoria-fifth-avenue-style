@@ -30,12 +30,7 @@ All colors MUST be HSL.
     --accent-foreground: 0 0% 0%;
 
     --gold: 45 100% 51%;
-    --gold-glow: 45 100% 65%;
     --marble: 240 5% 96%;
-    
-    /* Magical gradient for special buttons */
-    --gradient-magic: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-glow)), hsl(var(--gold)));
-    --shadow-magic: 0 0 20px hsl(var(--gold) / 0.3), 0 0 40px hsl(var(--gold) / 0.1);
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -109,62 +104,5 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-  }
-}
-
-@layer components {
-  /* Magical sparkle button */
-  .magical-button {
-    @apply relative overflow-hidden;
-    background: var(--gradient-magic);
-    box-shadow: var(--shadow-magic);
-    animation: glow 2s ease-in-out infinite alternate;
-  }
-  
-  .magical-button::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.2) 50%, transparent 70%);
-    animation: shimmer 3s infinite;
-    pointer-events: none;
-  }
-  
-  .magical-button::after {
-    content: '✨';
-    position: absolute;
-    top: 50%;
-    right: 8px;
-    transform: translateY(-50%);
-    animation: sparkle 1.5s ease-in-out infinite;
-    pointer-events: none;
-  }
-}
-
-@keyframes glow {
-  0% { box-shadow: var(--shadow-magic); }
-  100% { 
-    box-shadow: 0 0 25px hsl(var(--gold) / 0.4), 
-                0 0 50px hsl(var(--gold) / 0.2),
-                0 0 75px hsl(var(--gold) / 0.1); 
-  }
-}
-
-@keyframes shimmer {
-  0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-  100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
-}
-
-@keyframes sparkle {
-  0%, 100% { 
-    opacity: 1; 
-    transform: translateY(-50%) scale(1);
-  }
-  50% { 
-    opacity: 0.5; 
-    transform: translateY(-50%) scale(1.2);
   }
 }
