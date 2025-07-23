@@ -20,20 +20,14 @@ const InstagramFeed = () => {
   ];
 
   const nextImage = () => {
-    console.log('Next button clicked, current index:', selectedImageIndex);
     if (selectedImageIndex !== null) {
-      const newIndex = (selectedImageIndex + 1) % instagramUrls.length;
-      console.log('Setting new index to:', newIndex);
-      setSelectedImageIndex(newIndex);
+      setSelectedImageIndex((selectedImageIndex + 1) % instagramUrls.length);
     }
   };
 
   const previousImage = () => {
-    console.log('Previous button clicked, current index:', selectedImageIndex);
     if (selectedImageIndex !== null) {
-      const newIndex = (selectedImageIndex - 1 + instagramUrls.length) % instagramUrls.length;
-      console.log('Setting new index to:', newIndex);
-      setSelectedImageIndex(newIndex);
+      setSelectedImageIndex((selectedImageIndex - 1 + instagramUrls.length) % instagramUrls.length);
     }
   };
 
@@ -90,31 +84,31 @@ const InstagramFeed = () => {
               ×
             </button>
             
-            <button
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 z-50 text-white bg-black/70 hover:bg-black/90 rounded-full w-12 h-12 flex items-center justify-center transition-colors pointer-events-auto"
+            <Button
+              variant="ghost"
+              size="icon"
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 text-white bg-black/50 hover:bg-black/70 rounded-full w-10 h-10 focus-visible:ring-0 focus-visible:ring-offset-0"
               onClick={(e) => {
                 e.preventDefault();
                 e.stopPropagation();
-                console.log('Previous button clicked');
                 previousImage();
               }}
-              type="button"
             >
-              <ChevronLeft className="h-5 w-5" />
-            </button>
+              <ChevronLeft className="h-4 w-4" />
+            </Button>
             
-            <button
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 z-50 text-white bg-black/70 hover:bg-black/90 rounded-full w-12 h-12 flex items-center justify-center transition-colors pointer-events-auto"
+            <Button
+              variant="ghost"
+              size="icon"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 text-white bg-black/50 hover:bg-black/70 rounded-full w-10 h-10 focus-visible:ring-0 focus-visible:ring-offset-0"
               onClick={(e) => {
                 e.preventDefault();
                 e.stopPropagation();
-                console.log('Next button clicked');
                 nextImage();
               }}
-              type="button"
             >
-              <ChevronRight className="h-5 w-5" />
-            </button>
+              <ChevronRight className="h-4 w-4" />
+            </Button>
 
             {selectedImageIndex !== null && (
               <div className="flex justify-center">
