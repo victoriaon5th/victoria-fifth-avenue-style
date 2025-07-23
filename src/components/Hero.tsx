@@ -38,15 +38,16 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                className="magical-button px-8 py-3 rounded-full text-black font-semibold text-lg 
+              <Button
+                size="lg"
+                className="magical-button px-8 py-3 text-lg text-black font-semibold 
                          transition-all duration-300 hover:scale-105 transform 
-                         shadow-lg hover:shadow-xl flex items-center gap-2 justify-center"
+                         shadow-lg hover:shadow-xl flex items-center gap-2"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 <Sparkles size={20} />
                 Get In Touch
-              </button>
+              </Button>
               <Button 
                 variant="outline" 
                 size="lg" 
