@@ -10,7 +10,7 @@ const Hero = () => {
             <img 
               src="/lovable-uploads/2fa1efde-823c-4f71-85c9-76de1e332c1e.png" 
               alt="Victoria on 5th Fashion Styling" 
-              className="w-full h-auto rounded-lg shadow-lg" 
+              className="w-2/3 h-auto rounded-lg shadow-lg mx-auto" 
             />
           </div>
           
