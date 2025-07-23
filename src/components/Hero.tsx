@@ -17,11 +17,11 @@ const Hero = () => {
           
           {/* Right side - Content */}
           <div className="order-1 lg:order-2 text-center">
-            <div className="mb-6">
+            <div className="mb-4">
               <img 
                 src="/lovable-uploads/fd5d79e8-06a6-4f64-b7ca-4e8112a8fd32.png" 
                 alt="Victoria on 5th Logo" 
-                className="h-60 mx-auto" 
+                className="h-72 mx-auto" 
               />
             </div>
             
