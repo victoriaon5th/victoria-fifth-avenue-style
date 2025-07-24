@@ -41,7 +41,7 @@ const Navigation = () => {
       isScrolled ? 'bg-background/95 backdrop-blur-sm shadow-sm' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4">
-        <div className="flex justify-center lg:justify-between items-center h-16">
+        <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <img 
               src="/lovable-uploads/e245d4f4-9fe5-41a8-aecd-f8384fd0dcb7.png" 
