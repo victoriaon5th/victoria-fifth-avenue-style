@@ -43,7 +43,7 @@ const Portfolio = () => {
       images: [
         "/lovable-uploads/1c8fb29d-8b2c-4568-be8c-7901de2f086f.png",
         "/lovable-uploads/1ddff1f2-6361-487f-a694-c7e0cea92bc0.png",
-        "/lovable-uploads/c45431e7-0442-469e-bdc9-e8ca1a030bb2.png",
+        "/lovable-uploads/236e8dbf-30d2-44e7-98b5-4ecad456348e.png",
         "/lovable-uploads/20136130-7799-48bf-b17e-58af7c871cf5.png"
       ]
     }
