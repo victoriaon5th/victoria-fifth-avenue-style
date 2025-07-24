@@ -3,7 +3,7 @@ import { Instagram, Heart } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center bg-background pt-0 md:pt-20 lg:pt-0">
+    <section className="min-h-screen flex items-center bg-background pt-0 -mt-10 md:mt-0 md:pt-20 lg:pt-0">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Left side - Image */}
