@@ -59,7 +59,7 @@ const Navigation = () => {
                     onClick={() => scrollToSection(item.href)}
                     className="magical-button px-4 py-2 rounded-full text-black font-semibold text-sm 
                              transition-all duration-300 hover:scale-105 transform 
-                             shadow-lg hover:shadow-xl min-w-[140px] flex items-center gap-2"
+                             shadow-lg hover:shadow-xl min-w-[140px] flex items-center gap-2 whitespace-nowrap"
                   >
                     <Sparkles size={16} />
                     {item.name}
