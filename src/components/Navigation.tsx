@@ -46,7 +46,7 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/e245d4f4-9fe5-41a8-aecd-f8384fd0dcb7.png" 
               alt="Victoria on 5th Logo" 
-              className="h-8 w-auto"
+              className="h-6 md:h-8 w-auto"
             />
           </div>
 
