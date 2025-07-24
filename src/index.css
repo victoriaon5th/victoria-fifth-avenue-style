@@ -133,15 +133,6 @@ All colors MUST be HSL.
     pointer-events: none;
   }
   
-  .magical-button::after {
-    content: '✨';
-    position: absolute;
-    top: 50%;
-    right: 8px;
-    transform: translateY(-50%);
-    animation: sparkle 1.5s ease-in-out infinite;
-    pointer-events: none;
-  }
 }
 
 @keyframes glow {
