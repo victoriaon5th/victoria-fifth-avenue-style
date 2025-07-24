@@ -25,9 +25,9 @@ const Hero = () => {
               />
             </div>
             
-            {/* <h1 className="font-serif text-4xl md:text-6xl font-bold text-foreground mb-6">
+            <h1 className="font-serif text-4xl md:text-6xl font-bold text-foreground mb-6">
               VICTORIAON5TH
-            </h1> */}
+            </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 font-light">
               24/7 Conceirge for Fashion, Styling, Shopping, Sourcing
