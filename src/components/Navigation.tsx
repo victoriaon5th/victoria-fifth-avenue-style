@@ -16,6 +16,7 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
+    { name: 'Home', href: '#' },
     { name: 'Services', href: '#services' },
     { name: 'About', href: '#about' },
     { name: 'Portfolio', href: '#portfolio' },
@@ -43,8 +44,8 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/e245d4f4-9fe5-41a8-aecd-f8384fd0dcb7.png" 
-              alt="Victoria on 5th Logo" 
+              src="/lovable-uploads/f5ae14cb-c777-4800-a247-7d5529474c88.png" 
+              alt="V5 Logo" 
               className="h-8 w-auto"
             />
           </div>
@@ -59,7 +60,7 @@ const Navigation = () => {
                     onClick={() => scrollToSection(item.href)}
                     className="magical-button px-4 py-2 rounded-full text-black font-semibold text-sm 
                              transition-all duration-300 hover:scale-105 transform 
-                             shadow-lg hover:shadow-xl min-w-[140px] flex items-center gap-2 whitespace-nowrap"
+                             shadow-lg hover:shadow-xl min-w-[140px] flex items-center gap-2"
                   >
                     <Sparkles size={16} />
                     {item.name}
