@@ -8,11 +8,16 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Left side - Image */}
           <div className="order-2 lg:order-1">
-            <img 
-              src="/lovable-uploads/2fa1efde-823c-4f71-85c9-76de1e332c1e.png" 
-              alt="Victoria on 5th Fashion Styling" 
-              className="w-2/3 h-auto rounded-lg shadow-lg mx-auto" 
-            />
+            <div className="w-2/3 mx-auto">
+              <img 
+                src="/lovable-uploads/2fa1efde-823c-4f71-85c9-76de1e332c1e.png" 
+                alt="Victoria on 5th Fashion Styling" 
+                className="w-full h-auto rounded-lg shadow-lg"
+                width="400"
+                height="600"
+                loading="eager"
+              />
+            </div>
           </div>
           
           {/* Right side - Content */}
