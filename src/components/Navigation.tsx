@@ -17,7 +17,7 @@ const Navigation = () => {
 
   const navItems = [
     { name: 'Home', href: '#' },
-    { name: 'Services', href: '#services' },
+    { name: 'Services', href: '/services' },
     { name: 'About', href: '#about' },
     { name: 'Portfolio', href: '#portfolio' },
     { name: 'Contact', href: '#contact' },
@@ -29,6 +29,8 @@ const Navigation = () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else if (href.startsWith('http')) {
       window.open(href, '_blank', 'noopener,noreferrer');
+    } else if (href.startsWith('/')) {
+      window.location.href = href;
     } else {
       const element = document.querySelector(href);
       element?.scrollIntoView({ behavior: 'smooth' });
