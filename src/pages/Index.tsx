@@ -7,6 +7,10 @@ const Index = () => {
     <div className="min-h-screen">
       <Navigation />
       <Hero />
+      
+      {/* Separator */}
+      <div className="w-full h-px bg-border"></div>
+      
       <Contact />
       
       {/* Footer with Copyright */}
