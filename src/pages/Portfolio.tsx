@@ -7,6 +7,12 @@ const PortfolioPage = () => {
     <div className="min-h-screen">
       <Navigation />
       <Portfolio />
+      
+      {/* Separator */}
+      <div className="container mx-auto px-4">
+        <div className="w-full h-px bg-border"></div>
+      </div>
+      
       <Contact />
       
       {/* Footer with Copyright */}
