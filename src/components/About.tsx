@@ -5,6 +5,11 @@ const About = () => {
   return (
     <section id="about" className="py-20 bg-background">
       <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-serif font-bold text-foreground mb-4">
+            About Me
+          </h1>
+        </div>
         <div className="flex justify-center">
           <Card className="max-w-4xl w-full bg-card border-border shadow-lg">
             <CardHeader className="text-center pb-4">
