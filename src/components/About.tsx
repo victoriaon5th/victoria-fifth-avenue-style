@@ -3,7 +3,7 @@ import InstagramFeed from "./InstagramFeed";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-background">
+    <section id="about" className="py-32 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h1 className="font-serif text-4xl md:text-6xl font-bold text-foreground mb-6">
@@ -52,7 +52,7 @@ const About = () => {
       </div>
       
       {/* Instagram Feed Section with Gray Background */}
-      <div className="py-20 bg-marble">
+      <div className="py-32 bg-marble">
         <div className="container mx-auto px-4">
           <InstagramFeed />
         </div>
