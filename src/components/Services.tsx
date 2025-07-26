@@ -100,38 +100,43 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-marble">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-6xl font-bold text-foreground mb-6">
-            SERVICES
-          </h2>
-          <div className="w-24 h-1 bg-gold mx-auto mb-8"></div>
+    <>
+      {/* Services Section with White Background */}
+      <section id="services" className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="font-serif text-4xl md:text-6xl font-bold text-foreground mb-6">
+              SERVICES
+            </h2>
+            <div className="w-24 h-1 bg-gold mx-auto mb-8"></div>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {services.map((service, index) => {
+              const IconComponent = service.icon;
+              return (
+                <Card key={index} className="text-center">
+                  <CardContent className="p-8">
+                    <div className="w-16 h-16 mx-auto mb-6 bg-gold/10 rounded-full flex items-center justify-center">
+                      <IconComponent className="h-8 w-8 text-gold" />
+                    </div>
+                    <h3 className="font-serif text-2xl text-gold mb-4 tracking-wide">
+                      {service.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {service.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
         </div>
-        
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {services.map((service, index) => {
-            const IconComponent = service.icon;
-            return (
-              <Card key={index} className="text-center">
-                <CardContent className="p-8">
-                  <div className="w-16 h-16 mx-auto mb-6 bg-gold/10 rounded-full flex items-center justify-center">
-                    <IconComponent className="h-8 w-8 text-gold" />
-                  </div>
-                  <h3 className="font-serif text-2xl text-gold mb-4 tracking-wide">
-                    {service.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {service.description}
-                  </p>
-                </CardContent>
-              </Card>
-            );
-          })}
-        </div>
-        
-        {/* Client Love Section */}
-        <div className="mt-20">
+      </section>
+
+      {/* Testimonials Section with Gray Background */}
+      <section className="py-20 bg-marble">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-serif text-4xl md:text-6xl font-bold text-foreground mb-6">
               TESTIMONIALS
@@ -154,62 +159,62 @@ const Services = () => {
               </div>
             ))}
           </div>
+
+          {/* Modal for viewing images */}
+          <Dialog open={selectedImageIndex !== null} onOpenChange={() => setSelectedImageIndex(null)}>
+            <DialogOverlay className="bg-black/60" />
+            <DialogContent className="max-w-4xl w-full max-h-[90vh] p-0 border-0 bg-transparent shadow-none [&>button]:hidden" autoFocus>
+              <DialogTitle className="sr-only">Client Love Gallery</DialogTitle>
+              <DialogDescription className="sr-only">View client testimonial images. Use arrow keys or navigation buttons to browse.</DialogDescription>
+              <div className="relative">
+                <button
+                  onClick={() => setSelectedImageIndex(null)}
+                  tabIndex={-1}
+                  className="absolute top-4 right-4 z-10 text-white bg-black/50 rounded-full w-8 h-8 flex items-center justify-center hover:bg-black/70 transition-colors text-lg leading-none focus-visible:ring-0 focus-visible:ring-offset-0 outline-none focus:outline-none"
+                >
+                  ×
+                </button>
+                
+                {/* Navigation buttons */}
+                <Button
+                  variant="outline"
+                  size="icon"
+                  tabIndex={-1}
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white z-10 focus-visible:ring-0 focus-visible:ring-offset-0 outline-none focus:outline-none"
+                  onMouseDown={(e) => e.preventDefault()}
+                  onClick={() => {
+                    prevImage();
+                  }}
+                >
+                  <ChevronLeft className="h-4 w-4" />
+                </Button>
+                
+                <Button
+                  variant="outline"
+                  size="icon"
+                  tabIndex={-1}
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white z-10 focus-visible:ring-0 focus-visible:ring-offset-0 outline-none focus:outline-none"
+                  onMouseDown={(e) => e.preventDefault()}
+                  onClick={() => {
+                    nextImage();
+                  }}
+                >
+                  <ChevronRight className="h-4 w-4" />
+                </Button>
+
+                {selectedImageIndex !== null && (
+                  <img 
+                    src={clientLoveImages[selectedImageIndex]} 
+                    alt="Client testimonial"
+                    className="w-full h-auto max-h-[85vh] object-contain rounded-lg"
+                  />
+                )}
+              </div>
+            </DialogContent>
+          </Dialog>
         </div>
-
-        {/* Modal for viewing images */}
-        <Dialog open={selectedImageIndex !== null} onOpenChange={() => setSelectedImageIndex(null)}>
-          <DialogOverlay className="bg-black/60" />
-          <DialogContent className="max-w-4xl w-full max-h-[90vh] p-0 border-0 bg-transparent shadow-none [&>button]:hidden" autoFocus>
-            <DialogTitle className="sr-only">Client Love Gallery</DialogTitle>
-            <DialogDescription className="sr-only">View client testimonial images. Use arrow keys or navigation buttons to browse.</DialogDescription>
-            <div className="relative">
-              <button
-                onClick={() => setSelectedImageIndex(null)}
-                tabIndex={-1}
-                className="absolute top-4 right-4 z-10 text-white bg-black/50 rounded-full w-8 h-8 flex items-center justify-center hover:bg-black/70 transition-colors text-lg leading-none focus-visible:ring-0 focus-visible:ring-offset-0 outline-none focus:outline-none"
-              >
-                ×
-              </button>
-              
-              {/* Navigation buttons */}
-              <Button
-                variant="outline"
-                size="icon"
-                tabIndex={-1}
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white z-10 focus-visible:ring-0 focus-visible:ring-offset-0 outline-none focus:outline-none"
-                onMouseDown={(e) => e.preventDefault()}
-                onClick={() => {
-                  prevImage();
-                }}
-              >
-                <ChevronLeft className="h-4 w-4" />
-              </Button>
-              
-              <Button
-                variant="outline"
-                size="icon"
-                tabIndex={-1}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white z-10 focus-visible:ring-0 focus-visible:ring-offset-0 outline-none focus:outline-none"
-                onMouseDown={(e) => e.preventDefault()}
-                onClick={() => {
-                  nextImage();
-                }}
-              >
-                <ChevronRight className="h-4 w-4" />
-              </Button>
-
-              {selectedImageIndex !== null && (
-                <img 
-                  src={clientLoveImages[selectedImageIndex]} 
-                  alt="Client testimonial"
-                  className="w-full h-auto max-h-[85vh] object-contain rounded-lg"
-                />
-              )}
-            </div>
-          </DialogContent>
-        </Dialog>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
