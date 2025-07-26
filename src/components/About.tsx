@@ -6,9 +6,10 @@ const About = () => {
     <section id="about" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-serif font-bold text-foreground mb-4">
-            About Me
+          <h1 className="font-serif text-4xl md:text-6xl font-bold text-foreground mb-6">
+            ABOUT ME
           </h1>
+          <div className="w-24 h-1 bg-gold mx-auto mb-8"></div>
         </div>
         <div className="flex justify-center">
           <Card className="max-w-4xl w-full bg-card border-border shadow-lg">
@@ -48,7 +49,11 @@ const About = () => {
             </CardContent>
           </Card>
         </div>
-        <div className="mt-16">
+      </div>
+      
+      {/* Instagram Feed Section with Gray Background */}
+      <div className="py-20 bg-marble">
+        <div className="container mx-auto px-4">
           <InstagramFeed />
         </div>
       </div>
