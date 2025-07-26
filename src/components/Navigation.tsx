@@ -19,7 +19,7 @@ const Navigation = () => {
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
     { name: 'About', href: '/about' },
-    { name: 'Portfolio', href: '#portfolio' },
+    { name: 'Portfolio', href: '/portfolio' },
     { name: 'Contact', href: '#contact' },
     { name: 'Curated Shops', href: 'https://linktr.ee/Victoriaon5th' },
   ];

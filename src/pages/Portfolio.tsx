@@ -1,12 +1,12 @@
 import Navigation from "@/components/Navigation";
-import Hero from "@/components/Hero";
+import Portfolio from "@/components/Portfolio";
 import Contact from "@/components/Contact";
 
-const Index = () => {
+const PortfolioPage = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <Hero />
+      <Portfolio />
       <Contact />
       
       {/* Footer with Copyright */}
@@ -21,4 +21,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default PortfolioPage;
