@@ -11,7 +11,7 @@ const About = () => {
           </h1>
           <div className="w-24 h-1 bg-gold mx-auto mb-8"></div>
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center pb-8">
           <Card className="max-w-4xl w-full bg-card border-border shadow-lg">
             <CardHeader className="text-center pb-4">
               <div className="mx-auto mb-4">
