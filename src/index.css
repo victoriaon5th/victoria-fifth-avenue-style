@@ -26,11 +26,11 @@ All colors MUST be HSL.
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 340 55% 75%;
+    --accent: 330 25% 92%;
     --accent-foreground: 0 0% 0%;
 
-    --gold: 340 55% 75%;
-    --gold-glow: 340 65% 80%;
+    --gold: 330 25% 92%;
+    --gold-glow: 330 30% 95%;
     --marble: 240 5% 96%;
     
     /* Magical gradient for special buttons */
